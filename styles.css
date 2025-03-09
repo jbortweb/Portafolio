@@ -85,6 +85,23 @@ h3 {
   right: 2%;
 }
 
+.presentacion h2 {
+  margin-bottom: 20px;
+}
+
+.presentacion p {
+  margin: 30px auto;
+  font-size: 1.5rem;
+  color: #fff;
+  width: 100%;
+}
+
+.presentacion a {
+  color: #E99401;
+  font-size: 1.8rem;
+  text-decoration: none;
+  margin-left: 5px;
+}
 
 .foto-mia {
   width: 486px;
@@ -115,8 +132,8 @@ h3 {
   color: #000;
   font-weight: bold;
   margin-left: 150px;
-  width: 50%;
-  text-align: justify;
+  width: 55%;
+  text-align: left
 }
 
 .habilidades {
@@ -138,7 +155,6 @@ h3 {
   align-items: center;
   margin-bottom: 15px;
   font-size: 1.8rem;
-  /* Tamaño de texto más grande */
 }
 
 .icono {
@@ -225,7 +241,7 @@ h3 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .icono-contacto {

@@ -38,7 +38,7 @@ tl.to(header, {
 
 tl.to(presentacion, {
   opacity: 1,
-  y: '-10vh',
+  y: '-5vh',
   scale: 1,
   duration: 3.5,
   immediateRender: false
@@ -61,7 +61,7 @@ tl.to(nave, {
 }, '-=2.5')
 
 tl.to(sobreMi, {
-  y: '-150vh',
+  y: '-180vh',
   duration: 3.5
 }, '-=4');
 tl.to(nave, {
