@@ -127,6 +127,19 @@ h3 {
   color: #E99401;
 }
 
+.logoweb {
+  margin: auto;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-personal {
+  width: 32px;
+  height: 32px;
+}
+
 .sobre-mi p {
   font-size: 1.2rem;
   color: #000;
