@@ -26,7 +26,7 @@
 
 .contenedor {
   width: 100%;
-  height: 800vh;
+  height: 810vh;
   text-align: center;
   overflow: hidden;
   background-image: linear-gradient(179.2deg,
@@ -240,12 +240,12 @@ h3 {
   background-repeat: no-repeat;
   opacity: 0;
   height: 400px;
-  top: 181vh;
+  top: 192vh;
 }
 
 .contacto h3 {
-  margin-top: 50px;
-  padding: 20px;
+  margin-top: 60px;
+  padding-top: 30px;
 }
 
 .enlaces {
@@ -255,6 +255,7 @@ h3 {
   justify-content: space-around;
   align-items: center;
   margin-top: 10px;
+  padding-left: 50px;
 }
 
 .icono-contacto {

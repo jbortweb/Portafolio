@@ -132,5 +132,6 @@ tl.to(nave, {
 
 tl.to(nave, {
   rotate: 0,
+  scale: 1,
   duration: 3
 }, '-=4')
