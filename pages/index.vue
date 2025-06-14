@@ -411,7 +411,7 @@ onMounted(() => {
         <img
           src="/img/perfil.webp"
           alt="Dibujo de perfil"
-          class="perfil w-[80%] max-h-[80vh] object-cover hover:border-8 hover:border-[#1e40af]"
+          class="perfil w-[80%] max-h-[80vh] object-cover"
         />
         <h3
           id="nombre"
@@ -470,7 +470,7 @@ onMounted(() => {
         class="w-[20%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-start justify-center gap-6"
       >
         <a
-          href="https://jbortweb.netlify.app/"
+          href="https://jbortweb.netlify.app/proyectos"
           target="_blank"
           rel="noopener"
           class="flex items-center gap-4 group justify-start"
@@ -478,7 +478,7 @@ onMounted(() => {
         >
           <img src="/img/contacto/web.svg" alt="Web" class="w-12 h-12" />
           <span class="text-2xl text-white group-hover:text-[#e6006b]"
-            >jbortweb.netlify.app</span
+            >Mis proyectos</span
           >
         </a>
         <!-- LinkedIn -->
@@ -495,7 +495,7 @@ onMounted(() => {
             class="w-12 h-12"
           />
           <span class="text-2xl text-white group-hover:text-[#e6006b]"
-            >Linkedin/jordi-bort</span
+            >Linkedin</span
           >
         </a>
         <!-- GitHub -->
@@ -508,7 +508,7 @@ onMounted(() => {
         >
           <img src="/img/contacto/github.svg" alt="GitHub" class="w-12 h-12" />
           <span class="text-2xl text-white group-hover:text-[#e6006b]"
-            >github.com/jbortweb</span
+            >GitHub</span
           >
         </a>
         <!-- Email -->
@@ -519,7 +519,7 @@ onMounted(() => {
         >
           <img src="/img/contacto/email.svg" alt="Email" class="w-12 h-12" />
           <span class="text-2xl text-white group-hover:text-[#e6006b]"
-            >jbortweb@gmail.com</span
+            >Email</span
           >
         </a>
       </div>
