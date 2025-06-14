@@ -1,75 +1,79 @@
-# Nuxt Minimal Starter
+# Portafolio Landing Page
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Landing page moderna y animada para portafolio personal, construida con Nuxt 3, Tailwind CSS y GSAP.
 
-## Setup
+## ✨ Tecnologías principales
 
-Make sure to install dependencies:
+- **Nuxt 3** (Vue 3 Framework)
+- **GSAP** (GreenSock Animation Platform, incluye ScrollTrigger y SplitText)
+- **Tailwind CSS** (v4, utility-first CSS)
 
-```bash
-# npm
-npm install
+## 📁 Estructura de carpetas
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```
+portafolio/
+├── assets/           # CSS y fuentes personalizadas
+├── pages/            # Páginas principales (index.vue)
+├── public/           # Imágenes, audio, favicon, etc.
+├── layouts/          # Layouts de Nuxt (si los usas)
+├── server/           # API/server (si los usas)
+├── nuxt.config.ts    # Configuración principal Nuxt
+├── tailwind.config.js# Configuración Tailwind
+├── package.json      # Dependencias y scripts
 ```
 
-## Development Server
+## 🚀 Instalación y desarrollo local
 
-Start the development server on `http://localhost:3000`:
+1. **Clona el repositorio y entra en la carpeta:**
+   ```bash
+   git clone [https://github.com/jbortweb/Portafolio.git](https://github.com/jbortweb/Portafolio.git)
+   cd portafolio
+   ```
+2. **Instala las dependencias:**
+   ```bash
+   npm install
+   # o
+   yarn install
+   # o
+   pnpm install
+   ```
+3. **Inicia el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   # o
+   yarn dev
+   # o
+   pnpm dev
+   ```
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-```bash
-# npm
-npm run dev
+## 🌍 Deploy en Netlify
 
-# pnpm
-pnpm dev
+1. **Sube tu proyecto a un repositorio en GitHub, GitLab o Bitbucket.**
+2. **Entra en [Netlify](https://app.netlify.com/) y pulsa "Add new site > Import an existing project".**
+3. **Selecciona tu repositorio y configura:**
+   - **Build command:** `npm run build`
+   - **Publish directory:** `.output/public`
+   - (Netlify detecta Nuxt 3 automáticamente)
+4. **Pulsa "Deploy site".**
+5. **¡Listo! Tu landing estará online en pocos minutos.**
 
-# yarn
-yarn dev
+> **Nota:** Si usas rutas personalizadas, revisa que tu `nuxt.config.ts` esté bien configurado para SSR/static según tu caso.
 
-# bun
-bun run dev
-```
+## 🖼️ Recursos y personalización
 
-## Production
+- Imágenes y audio en `/public/img` y `/public/audio`.
+- Fuentes personalizadas en `/assets/fonts` y configuradas en `tailwind.config.js`.
+- Colores y estilos principales en `/assets/css/main.css`.
 
-Build the application for production:
+## 👤 Créditos y contacto
 
-```bash
-# npm
-npm run build
+Desarrollado por **Jordi Bort**
 
-# pnpm
-pnpm build
+- [Web personal](https://jbortweb.com)
+- [LinkedIn](https://www.linkedin.com/in/jbortweb)
+- [GitHub](https://github.com/jbortweb)
 
-# yarn
-yarn build
+---
 
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+_Proyecto optimizado para animaciones fluidas, interacción visual y código abierto._
