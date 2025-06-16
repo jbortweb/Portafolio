@@ -400,7 +400,7 @@ onMounted(() => {
           mis competencias se centran en PHP y Laravel, con el desarrollo de
           APIs REST con estas tecnologías. Además, tengo conocimientos de
           Node.js, TypeScript, SCSS, Nuxt, jQuery, Git, Linux, Tailwind y
-          Material UI.
+          Material UI, entre muchas otras.
         </p>
         <!-- 
         <audio id="audio-teclado" preload="auto">
