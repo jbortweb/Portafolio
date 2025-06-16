@@ -440,14 +440,14 @@ onMounted(() => {
       </h3>
 
       <div
-        class="w-[90%] md:w-[20%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-start sm:items-center justify-center gap-6"
+        class="w-[90%] md:w-[20%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-6"
       >
-        <!-- Proyectos -->
+        <!-- Reutiliza esta clase para todos los enlaces -->
         <a
           href="https://jbortweb.netlify.app/proyectos"
           target="_blank"
           rel="noopener"
-          class="flex items-center gap-4"
+          class="flex w-full items-center gap-4 justify-start"
           id="web"
         >
           <img src="/img/contacto/web.svg" alt="Web" class="w-12 h-12" />
@@ -456,12 +456,11 @@ onMounted(() => {
           >
         </a>
 
-        <!-- LinkedIn -->
         <a
           href="https://www.linkedin.com/in/jordi-bort/"
           target="_blank"
           rel="noopener"
-          class="flex items-center gap-4"
+          class="flex w-full items-center gap-4 justify-start"
           id="linkedin"
         >
           <img
@@ -472,22 +471,20 @@ onMounted(() => {
           <span class="text-2xl text-white hover:text-[#e6006b]">Linkedin</span>
         </a>
 
-        <!-- GitHub -->
         <a
           href="https://github.com/jbortweb"
           target="_blank"
           rel="noopener"
-          class="flex items-center gap-4"
+          class="flex w-full items-center gap-4 justify-start"
           id="github"
         >
           <img src="/img/contacto/github.svg" alt="GitHub" class="w-12 h-12" />
           <span class="text-2xl text-white hover:text-[#e6006b]">GitHub</span>
         </a>
 
-        <!-- Email -->
         <a
           href="mailto:jbortweb@gmail.com"
-          class="flex items-center gap-4"
+          class="flex w-full items-center gap-4 justify-start"
           id="email"
         >
           <img src="/img/contacto/email.svg" alt="Email" class="w-12 h-12" />
