@@ -268,7 +268,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="h-[800vh]">
     <div id="logo-mask" class="fixed top-0 w-full h-screen">
       <section id="seccion-1" class="h-screen">
         <picture
