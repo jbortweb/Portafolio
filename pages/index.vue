@@ -278,7 +278,7 @@ onMounted(() => {
           <img
             src="@/public/img/logo.svg"
             alt="logo"
-            class="absolute w-[400px] h-[400px] object-cover top-[5%] right-[10%] -translate-x-[10%] -translate-y-[5%] z-20"
+            class="absolute w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[400px] md:h-[400px] object-cover top-[10%] md:top-[5%] right-[10%] -translate-x-[10%] -translate-y-[5%] z-20"
             id="logo"
           />
           <img
@@ -292,10 +292,10 @@ onMounted(() => {
           <img
             src="/img/logocut.svg"
             alt="Logo cortado"
-            class="w-36 h-36 drop-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000]"
+            class="w-24 h-24 md:w-36 md:h-36 drop-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000]"
           />
           <span
-            class="uppercase absolute tracking-[8px] whitespace-nowrap text-center top-14 left-1/2 -translate-x-1/2 text-2xl font-custom font-semibold"
+            class="uppercase absolute tracking-[8px] whitespace-nowrap text-center top-10 md:top-14 left-1/2 -translate-x-1/2 text-xs md:text-2xl font-custom font-semibold"
             >FullStack Developer</span
           >
         </div>
@@ -314,53 +314,58 @@ onMounted(() => {
           class="absolute left-1/2 bottom-16 -translate-x-1/2 w-36 h-36 rounded-full shadow-lg"
           style="z-index: 20; opacity: 0; clip-path: circle(0% at 50% 50%)"
         />
-        <h2 id="oficio" class="text-4xl font-custom font-semibold text-white">
+        <h2
+          id="oficio"
+          class="text-2xl md:text-4xl font-custom font-semibold text-white text-center"
+        >
           FullStack Developer
         </h2>
       </div>
       <div
         id="lenguajes"
-        class="fixed w-full bottom-40 left-1/2 -translate-x-1/2 opacity-0"
+        class="fixed w-full bottom-40 left-1/2 -translate-x-1/2 opacity-0 sm: flex sm:items-center sm:justify-center"
       >
-        <div class="flex justify-center gap-2">
+        <div
+          class="grid grid-cols-2 grid-rows-4 gap-3 absolute -top-20 left-1/2 -translate-x-1/2 w-[90vw] justify-items-center mx-auto sm:grid-cols-8 sm:grid-rows-1 sm:static sm:left-auto sm:translate-x-0 sm:w-auto sm:max-w-3xl"
+        >
           <img
-            class="icono-lenguaje izquierda w-16 h-16"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
             src="/img/icons/html.svg"
             alt="HTML"
           />
           <img
-            class="icono-lenguaje izquierda w-16 h-16"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
             src="/img/icons/css.svg"
             alt="CSS"
           />
           <img
-            class="icono-lenguaje izquierda w-16 h-16"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
             src="/img/icons/javascript.svg"
             alt="JavaScript"
           />
 
           <img
-            class="icono-lenguaje izquierda w-16 h-16"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
             src="/img/icons/react.svg"
             alt="React"
           />
           <img
-            class="icono-lenguaje derecha w-16 h-16"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
             src="/img/icons/vue.svg"
             alt="Vue"
           />
           <img
-            class="icono-lenguaje derecha w-18 h-18"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
             src="/img/icons/nuxt-icon.svg"
             alt="Nuxt"
           />
           <img
-            class="icono-lenguaje derecha w-24 h-16"
+            class="icono-lenguaje w-16 h-12 sm:w-24 sm:h-16 md:w-28 md:h-24 relative -top-4 md:top-0"
             src="/img/icons/laravel.svg"
             alt="Laravel"
           />
           <img
-            class="icono-lenguaje derecha w-24 h-24"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 md:relative md:top-6"
             src="/img/icons/php.svg"
             alt="PHP"
           />
@@ -388,7 +393,7 @@ onMounted(() => {
         </h3>
         <p
           id="presentacion"
-          class="w-[80%] relative top-8 font-custom text-xl break-words whitespace-pre-line text-white"
+          class="w-[80%] relative top-8 font-custom text-xs sm:text-xl break-words whitespace-pre-line text-white"
         >
           El área principal de mi experiencia es el desarrollo front-end usando
           HTML5, CSS3 y JavaScript; tengo amplios conocimientos de React y de
@@ -428,32 +433,35 @@ onMounted(() => {
       class="fixed inset-0 h-screen bg-[rgb(17,17,17)] opacity-0"
     >
       <h3
-        class="text-6xl font-custom font-semibold text-white absolute top-1/6 left-1/2 -translate-x-1/2 -translate-y-1/6"
+        class="text-4xl md:text-6xl font-custom font-semibold text-white absolute top-1/6 left-1/2 -translate-x-1/2 -translate-y-1/6"
         id="contacto"
       >
         Contacto
       </h3>
+
       <div
-        class="w-[20%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-start justify-center gap-6"
+        class="w-[90%] md:w-[20%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-start sm:items-center justify-center gap-6"
       >
+        <!-- Proyectos -->
         <a
           href="https://jbortweb.netlify.app/proyectos"
           target="_blank"
           rel="noopener"
-          class="flex items-center gap-4 group justify-start"
+          class="flex items-center gap-4"
           id="web"
         >
           <img src="/img/contacto/web.svg" alt="Web" class="w-12 h-12" />
-          <span class="text-2xl text-white group-hover:text-[#e6006b]"
+          <span class="text-2xl text-white hover:text-[#e6006b]"
             >Mis proyectos</span
           >
         </a>
+
         <!-- LinkedIn -->
         <a
           href="https://www.linkedin.com/in/jordi-bort/"
           target="_blank"
           rel="noopener"
-          class="flex items-center gap-4 group justify-start"
+          class="flex items-center gap-4"
           id="linkedin"
         >
           <img
@@ -461,33 +469,29 @@ onMounted(() => {
             alt="LinkedIn"
             class="w-12 h-12"
           />
-          <span class="text-2xl text-white group-hover:text-[#e6006b]"
-            >Linkedin</span
-          >
+          <span class="text-2xl text-white hover:text-[#e6006b]">Linkedin</span>
         </a>
+
         <!-- GitHub -->
         <a
           href="https://github.com/jbortweb"
           target="_blank"
           rel="noopener"
-          class="flex items-center gap-4 group justify-start"
+          class="flex items-center gap-4"
           id="github"
         >
           <img src="/img/contacto/github.svg" alt="GitHub" class="w-12 h-12" />
-          <span class="text-2xl text-white group-hover:text-[#e6006b]"
-            >GitHub</span
-          >
+          <span class="text-2xl text-white hover:text-[#e6006b]">GitHub</span>
         </a>
+
         <!-- Email -->
         <a
           href="mailto:jbortweb@gmail.com"
-          class="flex items-center gap-4 group justify-start"
+          class="flex items-center gap-4"
           id="email"
         >
           <img src="/img/contacto/email.svg" alt="Email" class="w-12 h-12" />
-          <span class="text-2xl text-white group-hover:text-[#e6006b]"
-            >Email</span
-          >
+          <span class="text-2xl text-white hover:text-[#e6006b]">Email</span>
         </a>
       </div>
     </section>
