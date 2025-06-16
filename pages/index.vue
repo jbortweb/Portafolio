@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 onMounted(() => {
   const split = new SplitText("#presentacion", { type: "words" });
+  const contacto = new SplitText("#contacto", { type: "words" });
 
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -46,7 +47,7 @@ onMounted(() => {
         opacity: 0.1,
         duration: 0.5,
       },
-      1.5
+      2.5
     )
     .to("#article", {
       opacity: 1,
@@ -131,7 +132,7 @@ onMounted(() => {
         duration: 1.2,
         ease: "power2.out",
       },
-      "<"
+      ">"
     )
     .to(
       "#nombre",
@@ -142,10 +143,7 @@ onMounted(() => {
       },
       ">"
     )
-    .to("#habitadetras", {
-      opacity: 1,
-      duration: 0.7,
-    })
+
     .fromTo(
       "#img-habitadetras",
       {
@@ -159,22 +157,17 @@ onMounted(() => {
       },
       ">" // sincroniza con el paso anterior
     )
-    .to("#habitalado", {
-      opacity: 1,
-      duration: 0.7,
-    })
     .fromTo(
       "#img-habitalado",
       {
         opacity: 0,
-        y: 1200, // o el valor que quieras, prueba con 200-400
       },
       {
         opacity: 1,
-        y: 0,
-        duration: 0.7,
+        duration: 1.4,
+        ease: "power2.out",
       },
-      ">" // sincroniza con el paso anterior
+      "-=1" // sincroniza con el paso anterior
     )
     .from(
       split.words,
@@ -186,7 +179,7 @@ onMounted(() => {
         duration: 1,
         ease: "power2.out",
       },
-      "-=0.5"
+      "-=1"
     )
     .to("#section3", {
       opacity: 0,
@@ -210,15 +203,27 @@ onMounted(() => {
       },
       "+=0.1"
     )
-    .to("#contacto", {
-      color: "#1e40af",
-      duration: 0.7,
-    })
-    .to("#contacto", {
-      color: "#e6006b",
-      duration: 0.7,
-      scale: 1.5,
-    })
+    .from(
+      contacto.words,
+      {
+        autoAlpha: 0,
+        y: -100,
+        filter: "blur(20px)",
+        stagger: 0.1,
+        duration: 2,
+        ease: "power2.out",
+      },
+      "-=1"
+    )
+    .to(
+      "#contacto",
+      {
+        color: "#e6006b",
+        duration: 1,
+        scale: 1.1,
+      },
+      ">"
+    )
     .fromTo(
       "#web",
       { x: -1200 },
@@ -405,14 +410,14 @@ onMounted(() => {
             id="img-habitadetras"
             src="/img/habitadetras.webp"
             alt="Dibujo de habita espaldas"
-            class="img-aparece carta-inferior opacity-0 border-0 rounded-lg cursor-pointer absolute bottom-10 right-[16px] w-[60%] h-full object-cover z-10"
+            class="opacity-0 border-0 rounded-lg cursor-pointer absolute bottom-10 right-[16px] w-[60%] h-full object-cover z-10"
             style="box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1)"
           />
           <img
             id="img-habitalado"
             src="/img/habitalado.webp"
             alt="Dibujo de habitalado"
-            class="img-aparece carta-superior opacity-0 rounded-lg cursor-pointer absolute top-10 left-0 w-[60%] h-full object-cover z-10 hover:border-2 hover:border-[#e6006b]"
+            class="opacity-0 rounded-lg cursor-pointer absolute top-10 left-0 w-[60%] h-full object-cover z-10 hover:border-2 hover:border-[#e6006b]"
             style="box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16)"
           />
         </div>
