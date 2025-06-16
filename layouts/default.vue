@@ -1,7 +1,5 @@
 <template>
-  <main
-    class="w-full min-h-screen bg-[rgb(17,17,17)] text-white overflow-x-hidden overscroll-behavior-none"
-  >
+  <main class="w-full min-h-screen bg-[rgb(17,17,17)] text-white">
     <NuxtPage />
   </main>
 </template>
