@@ -395,12 +395,12 @@ onMounted(() => {
           id="presentacion"
           class="w-[80%] relative top-8 font-custom text-xs sm:text-xl break-words whitespace-pre-line text-white"
         >
-          El área principal de mi experiencia es el desarrollo front-end usando
-          HTML5, CSS3 y JavaScript; tengo amplios conocimientos de React y de
-          VueJs. De Backend estudie y tengo varios proyectos con PHP y Laravel,
-          tambien puedo realizar APIRest con estas tecnologías. Ademas tengo
-          conocimientos de Node.js, TypeScript, SCSS, Nuxt, jQuery, Git, Linux,
-          SEO, UX, Tailwind, Material UI, etc.
+          Mi experiencia principal es en desarrollo front-end con HTML5, CSS3 y
+          JavaScript, y tengo sólidos conocimientos de React y VueJs. En
+          backend, he trabajado con PHP y Laravel, y también desarrollo APIs
+          REST con estas tecnologías. Además, tengo experiencia con Node.js,
+          TypeScript, SCSS, Nuxt, jQuery, Git, Linux, así como en SEO, UX y
+          frameworks de estilo como Tailwind y Material UI.
         </p>
         <!-- 
         <audio id="audio-teclado" preload="auto">
