@@ -7,28 +7,8 @@ import SplitText from "gsap/SplitText";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 onMounted(() => {
-  const superior = document.getElementById("img-habitalado");
-  const inferior = document.getElementById("img-habitadetras");
+  const split = new SplitText("#presentacion", { type: "words" });
 
-  if (superior && inferior) {
-    superior.addEventListener("mouseenter", () => {
-      superior.classList.add("hovered");
-      inferior.classList.remove("hovered");
-    });
-
-    superior.addEventListener("mouseleave", () => {
-      superior.classList.remove("hovered");
-    });
-
-    inferior.addEventListener("mouseenter", () => {
-      inferior.classList.add("hovered");
-      superior.classList.remove("hovered");
-    });
-
-    inferior.addEventListener("mouseleave", () => {
-      inferior.classList.remove("hovered");
-    });
-  }
   const tl = gsap.timeline({
     scrollTrigger: {
       scrub: 1,
@@ -74,11 +54,11 @@ onMounted(() => {
       scale: 1.5,
     })
     .to("#oficio", {
-      color: "#E6006B",
+      color: "#1E40AF",
       duration: 0.2,
     })
     .to("#oficio", {
-      color: "#1E40AF",
+      color: "#E6006B",
       duration: 0.4,
     })
     .to(
@@ -162,69 +142,51 @@ onMounted(() => {
       },
       ">"
     )
-    .to(
-      "#presentacion",
+    .to("#habitadetras", {
+      opacity: 1,
+      duration: 0.7,
+    })
+    .fromTo(
+      "#img-habitadetras",
+      {
+        opacity: 0,
+        x: 1200, // o el valor que quieras, prueba con 200-400
+      },
       {
         opacity: 1,
-        duration: 4,
-        onStart: () => {
-          const p = document.getElementById("presentacion");
-          const audio = document.getElementById("audio-teclado");
-          if (!p) return;
-          // No repetir animación si ya está visible
-          if (
-            p._splitText &&
-            p._splitText.chars &&
-            p._splitText.chars[0]?.style.opacity === "1"
-          )
-            return;
-          if (p._splitText) p._splitText.revert();
-          const split = new SplitText(p, { type: "chars" });
-          p._splitText = split;
-          gsap.set(split.chars, { opacity: 0 });
-          if (audio) {
-            audio.currentTime = 0;
-            audio.play();
-          }
-          p.style.color = "#1E40AF";
-          gsap.to(split.chars, {
-            opacity: 1,
-            duration: 0.5,
-            stagger: { each: 4 / split.chars.length },
-            ease: "power2.out",
-            onComplete: () => {
-              if (audio) {
-                audio.pause();
-                audio.currentTime = 0;
-              }
-              gsap.to(p, { color: "#fff", duration: 0.7 });
-            },
-          });
-          gsap.to(p, {
-            color: "#E6006B",
-            duration: 0.5,
-            delay: 7 / (2 * split.chars.length),
-          });
-          // Animar imágenes de la derecha
-          const imgHabitalado = document.getElementById("img-habitalado");
-          const imgHabitadetras = document.getElementById("img-habitadetras");
-          if (imgHabitadetras) {
-            gsap.to(imgHabitadetras, {
-              opacity: 1,
-              x: 0,
-              duration: 1.1,
-              ease: "power2.out",
-            });
-          }
-          if (imgHabitalado) {
-            gsap.to(imgHabitalado, {
-              opacity: 1,
-              x: 0,
-            });
-          }
-        },
+        x: 0,
+        duration: 0.7,
       },
-      "<"
+      ">" // sincroniza con el paso anterior
+    )
+    .to("#habitalado", {
+      opacity: 1,
+      duration: 0.7,
+    })
+    .fromTo(
+      "#img-habitalado",
+      {
+        opacity: 0,
+        y: 1200, // o el valor que quieras, prueba con 200-400
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+      },
+      ">" // sincroniza con el paso anterior
+    )
+    .from(
+      split.words,
+      {
+        autoAlpha: 0,
+        y: 100,
+        filter: "blur(10px)",
+        stagger: 0.1,
+        duration: 1,
+        ease: "power2.out",
+      },
+      "-=0.5"
     )
     .to("#section3", {
       opacity: 0,
@@ -240,11 +202,11 @@ onMounted(() => {
       {
         opacity: 1,
         scale: 1,
-        duration: 0.7,
+        duration: 0.7 /* 
         onStart: () => {
           const s4 = document.getElementById("section4");
           if (s4) s4.style.pointerEvents = "auto";
-        },
+        }, */,
       },
       "+=0.1"
     )
@@ -421,8 +383,7 @@ onMounted(() => {
         </h3>
         <p
           id="presentacion"
-          class="w-[80%] relative top-8 font-custom text-xl break-words whitespace-pre-line"
-          style="opacity: 0"
+          class="w-[80%] relative top-8 font-custom text-xl break-words whitespace-pre-line text-white"
         >
           El área principal de mi experiencia es el desarrollo front-end usando
           HTML5, CSS3 y JavaScript; tengo amplios conocimientos de React y de
@@ -431,9 +392,10 @@ onMounted(() => {
           conocimientos de Node.js, TypeScript, SCSS, Nuxt, jQuery, Git, Linux,
           SEO, UX, Tailwind, Material UI, etc.
         </p>
+        <!-- 
         <audio id="audio-teclado" preload="auto">
           <source src="/audio/teclado.mp3" type="audio/mpeg" />
-        </audio>
+        </audio> -->
       </div>
       <div
         class="flex-1 flex flex-col items-center justify-center relative min-h-[320px]"
@@ -443,14 +405,14 @@ onMounted(() => {
             id="img-habitadetras"
             src="/img/habitadetras.webp"
             alt="Dibujo de habita espaldas"
-            class="img-aparece carta-inferior opacity-0 translate-x-32 transition-all duration-500 border-0 rounded-lg cursor-pointer absolute bottom-10 right-16 w-[60%] h-full object-cover z-10"
+            class="img-aparece carta-inferior opacity-0 border-0 rounded-lg cursor-pointer absolute bottom-10 right-[16px] w-[60%] h-full object-cover z-10"
             style="box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1)"
           />
           <img
             id="img-habitalado"
             src="/img/habitalado.webp"
             alt="Dibujo de habitalado"
-            class="img-aparece carta-superior opacity-0 translate-x-64 transition-all duration-500 border-0 rounded-lg cursor-pointer absolute top-10 left-0 w-[60%] h-full object-cover z-10"
+            class="img-aparece carta-superior opacity-0 rounded-lg cursor-pointer absolute top-10 left-0 w-[60%] h-full object-cover z-10 hover:border-2 hover:border-[#e6006b]"
             style="box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16)"
           />
         </div>
@@ -549,26 +511,5 @@ onMounted(() => {
 }
 .perfil:hover {
   border: 8px solid #1e40af !important;
-}
-.img-aparece {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#img-habitadetras,
-#img-habitalado {
-  position: absolute;
-  transition: z-index 0.3s, border 0.3s;
-  border: 4px solid transparent;
-}
-
-#img-habitadetras.hovered,
-#img-habitalado.hovered {
-  z-index: 10;
-  border: 4px solid #e6006b;
-}
-.hovered {
-  opacity: 1 !important;
-  z-index: 30;
-  transform: scale(1.05);
 }
 </style>
