@@ -498,8 +498,8 @@ onMounted(() => {
 <style scoped>
 #logo-mask {
   background-color: #fff;
-  -webkit-mask-image: url("@/public/img/logo.svg");
-  mask-image: url("@/public/img/logo.svg");
+  -webkit-mask-image: url("/img/logo.svg");
+  mask-image: url("/img/logo.svg");
   -webkit-mask-size: clamp(5000vh, 3500%, 0vh);
   mask-size: clamp(5000vh, 3500%, 0vh);
   -webkit-mask-position: center 25%;
