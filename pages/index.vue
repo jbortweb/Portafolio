@@ -278,7 +278,7 @@ onMounted(() => {
           <img
             src="@/public/img/logo.svg"
             alt="logo"
-            class="absolute w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] sm:w-[400px] sm:h-[400px] object-cover top-[10%] sm:top-[5%] right-[10%] -translate-x-[10%] -translate-y-[5%] z-20"
+            class="absolute w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] lg:w-[400px] lg:h-[400px] object-cover top-[10%] lg:top-[5%] right-[10%] -translate-x-[10%] -translate-y-[5%] z-20"
             id="logo"
           />
           <img
