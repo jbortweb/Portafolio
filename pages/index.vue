@@ -278,7 +278,7 @@ onMounted(() => {
           <img
             src="@/public/img/logo.svg"
             alt="logo"
-            class="absolute w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[400px] md:h-[400px] object-cover top-[10%] md:top-[5%] right-[10%] -translate-x-[10%] -translate-y-[5%] z-20"
+            class="absolute w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] sm:w-[400px] sm:h-[400px] object-cover top-[10%] sm:top-[5%] right-[10%] -translate-x-[10%] -translate-y-[5%] z-20"
             id="logo"
           />
           <img
@@ -292,10 +292,10 @@ onMounted(() => {
           <img
             src="/img/logocut.svg"
             alt="Logo cortado"
-            class="w-24 h-24 md:w-36 md:h-36 drop-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000]"
+            class="w-24 h-24 sm:w-36 sm:h-36 drop-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000]"
           />
           <span
-            class="uppercase absolute tracking-[8px] whitespace-nowrap text-center top-10 md:top-14 left-1/2 -translate-x-1/2 text-xs md:text-2xl font-custom font-semibold"
+            class="uppercase absolute tracking-[8px] whitespace-nowrap text-center top-10 sm:top-14 left-1/2 -translate-x-1/2 text-xs sm:text-2xl font-custom font-semibold"
             >FullStack Developer</span
           >
         </div>
@@ -316,7 +316,7 @@ onMounted(() => {
         />
         <h2
           id="oficio"
-          class="text-2xl md:text-4xl font-custom font-semibold text-white text-center"
+          class="text-2xl sm:text-4xl font-custom font-semibold text-white text-center"
         >
           FullStack Developer
         </h2>
@@ -329,43 +329,43 @@ onMounted(() => {
           class="grid grid-cols-2 grid-rows-4 gap-3 absolute -top-20 left-1/2 -translate-x-1/2 w-[90vw] justify-items-center mx-auto sm:grid-cols-8 sm:grid-rows-1 sm:static sm:left-auto sm:translate-x-0 sm:w-auto sm:max-w-3xl"
         >
           <img
-            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16"
             src="/img/icons/html.svg"
             alt="HTML"
           />
           <img
-            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16"
             src="/img/icons/css.svg"
             alt="CSS"
           />
           <img
-            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16"
             src="/img/icons/javascript.svg"
             alt="JavaScript"
           />
 
           <img
-            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16"
             src="/img/icons/react.svg"
             alt="React"
           />
           <img
-            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16"
             src="/img/icons/vue.svg"
             alt="Vue"
           />
           <img
-            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24"
+            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16"
             src="/img/icons/nuxt-icon.svg"
             alt="Nuxt"
           />
           <img
-            class="icono-lenguaje w-16 h-12 sm:w-24 sm:h-16 md:w-28 md:h-24 relative -top-4 md:top-0"
+            class="icono-lenguaje w-16 h-12 sm:w-24 sm:h-16 relative -top-4 sm:top-0"
             src="/img/icons/laravel.svg"
             alt="Laravel"
           />
           <img
-            class="icono-lenguaje w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 md:relative md:top-6"
+            class="icono-lenguaje w-16 h-12 sm:w-16 sm:h-24 sm:relative sm:top-4"
             src="/img/icons/php.svg"
             alt="PHP"
           />
@@ -375,7 +375,7 @@ onMounted(() => {
 
     <section
       id="section3"
-      class="fixed bottom-0 h-screen bg-[rgb(17,17,17)] flex items-center justify-center opacity-0 scale-100 pointer-events-none gap-8 px-8 md:px-16 py-8 md:py-12"
+      class="fixed bottom-0 h-screen bg-[rgb(17,17,17)] flex items-center justify-center opacity-0 scale-100 pointer-events-none gap-8 px-8 sm:px-16 py-8 sm:py-12"
     >
       <div
         class="text-white flex-1 h-full min-h-0 flex flex-col justify-center items-center"
@@ -433,14 +433,14 @@ onMounted(() => {
       class="fixed inset-0 h-screen bg-[rgb(17,17,17)] opacity-0"
     >
       <h3
-        class="text-4xl md:text-6xl font-custom font-semibold text-white absolute top-1/6 left-1/2 -translate-x-1/2 -translate-y-1/6"
+        class="text-4xl sm:text-6xl font-custom font-semibold text-white absolute top-1/6 left-1/2 -translate-x-1/2 -translate-y-1/6"
         id="contacto"
       >
         Contacto
       </h3>
 
       <div
-        class="w-[90%] md:w-[20%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-6"
+        class="w-[90%] sm:w-[20%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-6"
       >
         <!-- Reutiliza esta clase para todos los enlaces -->
         <a
@@ -498,9 +498,13 @@ onMounted(() => {
 <style scoped>
 #logo-mask {
   background-color: #fff;
+  -webkit-mask-image: url("@/public/img/logo.svg");
   mask-image: url("@/public/img/logo.svg");
+  -webkit-mask-size: clamp(5000vh, 3500%, 0vh);
   mask-size: clamp(5000vh, 3500%, 0vh);
+  -webkit-mask-position: center 25%;
   mask-position: center 25%;
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
 .icono-lenguaje {
