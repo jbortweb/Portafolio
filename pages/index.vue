@@ -268,7 +268,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="h-[800vh]">
+  <div class="h-[800dvh]">
     <div id="logo-mask" class="fixed top-0 w-full h-screen">
       <section id="seccion-1" class="h-screen">
         <picture
@@ -383,7 +383,7 @@ onMounted(() => {
         <img
           src="/img/perfil.webp"
           alt="Dibujo de perfil"
-          class="perfil w-[80%] max-h-[80vh] object-cover"
+          class="perfil w-[80%] max-h-[80dvh] object-cover"
         />
         <h3
           id="nombre"
@@ -410,7 +410,7 @@ onMounted(() => {
       <div
         class="flex-1 flex flex-col items-center justify-center relative min-h-[320px]"
       >
-        <div class="w-[50%] h-[80vh] max-w-full">
+        <div class="w-[50%] h-[80dvh] max-w-full">
           <img
             id="img-habitadetras"
             src="/img/habitadetras.webp"
