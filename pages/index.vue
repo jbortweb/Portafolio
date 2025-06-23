@@ -148,14 +148,14 @@ onMounted(() => {
       "#img-habitadetras",
       {
         opacity: 0,
-        x: 1200, // o el valor que quieras, prueba con 200-400
+        x: 1200,
       },
       {
         opacity: 1,
         x: 0,
         duration: 0.7,
       },
-      ">" // sincroniza con el paso anterior
+      ">"
     )
     .fromTo(
       "#img-habitalado",
@@ -167,7 +167,7 @@ onMounted(() => {
         duration: 1.4,
         ease: "power2.out",
       },
-      "-=1" // sincroniza con el paso anterior
+      "-=1"
     )
     .from(
       split.words,
@@ -311,7 +311,7 @@ onMounted(() => {
           id="fotomia"
           src="/img/fotomia.webp"
           alt="Mi foto"
-          class="absolute left-1/2 bottom-16 -translate-x-1/2 w-36 h-36 rounded-full shadow-lg"
+          class="absolute left-1/2 bottom-16 -translate-x-1/2 w-36 h-36 rounded-full shadow-lg object-cover"
           style="z-index: 20; opacity: 0; clip-path: circle(0% at 50% 50%)"
         />
         <h2
