@@ -35,7 +35,7 @@ onMounted(() => {
     .from(".strong-zen", {
       opacity: 0,
       y: 50,
-      duration: 1,
+      duration: 0.7,
       stagger: 0.5,
       ease: "power2.out",
     })
@@ -48,7 +48,7 @@ onMounted(() => {
     .from(".strong-maduixa", {
       opacity: 0,
       y: 50,
-      duration: 1,
+      duration: 0.7,
       stagger: 0.5,
       ease: "power2.out",
     })
@@ -65,7 +65,7 @@ onMounted(() => {
     .from(".strong-planterra", {
       opacity: 0,
       y: 50,
-      duration: 1,
+      duration: 0.7,
       stagger: 0.5,
       ease: "power2.out",
     })
@@ -82,7 +82,7 @@ onMounted(() => {
     .from(".strong-cafe", {
       opacity: 0,
       y: 50,
-      duration: 1,
+      duration: 0.7,
       stagger: 0.5,
       ease: "power2.out",
     });
