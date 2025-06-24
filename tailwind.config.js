@@ -1,12 +1,4 @@
 module.exports = {
-  theme: {
-    extend: {
-      fontFamily: {
-        custom: ['CustomFont', 'sans-serif'],
-        narrow: ['CustomFontNarrow', 'sans-serif'],
-      },
-    },
-  },
   content: [
     './components/**/*.{vue,js}',
     './layouts/**/*.vue',
@@ -14,5 +6,16 @@ module.exports = {
     './app.vue',
     './nuxt.config.{js,ts}',
   ],
+  theme: {
+    extend: {
+      fontFamily: {
+        custom: ['CustomFont', 'sans-serif'],
+        narrow: ['CustomFontNarrow', 'sans-serif'],
+      },
+      colors: {
+        rosa: "#e6006b",
+      }
+    },
+  },
   plugins: [],
 };
