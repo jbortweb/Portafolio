@@ -415,10 +415,7 @@ onMounted(() => {
             conocimientos de Node.js, TypeScript, SCSS, Nuxt, jQuery, Git,
             Linux, Tailwind y Material UI, entre muchas otras.
           </p>
-          <!-- 
-        <audio id="audio-teclado" preload="auto">
-          <source src="/audio/teclado.mp3" type="audio/mpeg" />
-        </audio> -->
+          <br />
         </div>
         <div
           class="flex-1 flex flex-col items-center justify-center relative min-h-[320px]"

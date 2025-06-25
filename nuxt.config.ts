@@ -8,4 +8,8 @@ export default defineNuxtConfig({
   css: ['@/assets/css/main.css'],
   devtools: { enabled: false },
   compatibilityDate: '2025-06-24',
+  devServer: {
+    host: '0.0.0.0',
+    port: 3000,
+  },
 })

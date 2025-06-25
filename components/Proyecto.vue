@@ -90,7 +90,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="container-proyectos" class="pb-96">
+  <div id="container-proyectos" class="relative top-[80dvh] md:top-0 pb-96">
     <h3
       id="titulo-zen"
       class="relative -top-30 text-4xl sm:text-6xl font-custom font-semibold text-white text-center py-12"
@@ -103,7 +103,9 @@ onMounted(() => {
           id="tele-zen"
           class="flex-1 flex flex-col justify-center items-center"
         >
-          <div class="imagen-proyecto flex items-center justify-center">
+          <div
+            class="imagen-proyecto flex items-center justify-center w-[90%] md:w-[50%] h-[420px]"
+          >
             <a
               href="/espaciozen"
               style="view-transition-name: espaciozen-img"
@@ -177,7 +179,7 @@ onMounted(() => {
 
       <!-- articulo maduixa -->
       <article
-        class="flex flex-col md:flex-row w-full h-screen bg-[rgb(17,17,17)]"
+        class="flex flex-col md:flex-row w-full h-[160dvh] md:h-screen bg-[rgb(17,17,17)]"
       >
         <div class="flex-1 flex flex-col justify-center items-center">
           <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
@@ -229,7 +231,9 @@ onMounted(() => {
           id="tele-maduixa"
           class="flex-1 flex flex-col justify-center items-center"
         >
-          <div class="imagen-proyecto flex items-center justify-center">
+          <div
+            class="imagen-proyecto flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
+          >
             <a
               href="/maduixa"
               style="view-transition-name: maduixa-img"
@@ -260,7 +264,9 @@ onMounted(() => {
           id="tele-planterra"
           class="flex-1 flex flex-col justify-center items-center"
         >
-          <div class="imagen-proyecto flex items-center justify-center">
+          <div
+            class="imagen-proyecto flex items-center justify-center w-[80%] sm:w-[50%] h-[420px]"
+          >
             <a
               href="/planterra"
               style="view-transition-name: planterra-img"
@@ -339,7 +345,7 @@ onMounted(() => {
       <!-- articulo cafe -->
 
       <article
-        class="flex flex-col md:flex-row w-full h-screen bg-[rgb(17,17,17)]"
+        class="flex flex-col md:flex-row w-full h-[160dvh] md:h-screen bg-[rgb(17,17,17)]"
       >
         <div class="flex-1 flex flex-col justify-center items-center">
           <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
@@ -390,7 +396,9 @@ onMounted(() => {
           id="tele-cafe"
           class="flex-1 flex flex-col justify-center items-center"
         >
-          <div class="imagen-proyecto flex items-center justify-center">
+          <div
+            class="imagen-proyecto flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
+          >
             <a
               href="/cafe"
               style="view-transition-name: cafe-img"
@@ -421,8 +429,6 @@ onMounted(() => {
 
 <style scoped>
 .imagen-proyecto {
-  width: 50%;
-  height: 420px;
   background-image: url("/img/proyectos/tele.webp");
   background-size: cover;
   background-position: center;
