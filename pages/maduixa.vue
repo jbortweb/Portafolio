@@ -9,12 +9,14 @@ onMounted(() => {
   const splitText = new SplitText("#texto-proyecto-maduixa", {
     type: "words",
   });
+  gsap.to("#texto-proyecto-maduixa", { opacity: 1, duration: 0.01 });
   gsap.from(splitText.words, {
-    duration: 1,
+    opacity: 0,
+    duration: 0.5,
     y: 100,
     stagger: 0.1,
-    autoAlpha: 0,
     filter: "blur(10px)",
+    ease: "power2.out",
   });
 });
 </script>
@@ -57,18 +59,16 @@ onMounted(() => {
       <div
         class="col-span-2 row-span-5 col-start-3 row-start-1 p-6 rounded-xl backdrop-blur"
       >
-        <div
-          id="texto-proyecto-maduixa"
-          class="flex flex-col h-full items-center justify-center px-4"
-        >
-          <p class="text-lg text-white font-custom">
+        <div class="flex flex-col h-full items-center justify-center px-4">
+          <p
+            id="texto-proyecto-maduixa"
+            class="text-lg text-white font-custom opacity-0"
+          >
             <span class="text-rosa text-xl">Lencería Maduixa</span> es una web
             desarrollada con Nuxt y Tailwind en el frontend, y con Laravel y
             Clerk en el backend para la gestión y autenticación. Está diseñada
             para mostrar un catálogo completo de productos y facilitar su
-            administración de forma segura.
-          </p>
-          <p class="text-lg text-white font-custom">
+            administración de forma segura. <br /><br />
             La página consta de dos vistas:<br />
             <span class="text-rosa text-xl">Cliente</span>: puede explorar todos
             los productos con sus imágenes, descripciones y precios de forma
@@ -76,15 +76,16 @@ onMounted(() => {
             <span class="text-rosa text-xl">Administrador</span>: vista
             autenticada mediante Clerk, donde el administrador puede acceder de
             forma segura para crear, editar y eliminar productos.
+            <br />
+            <br />
+            <br />
+            <NuxtLink
+              to="/"
+              class="back-button text-rosa font-custom text-lg pt-40"
+            >
+              ← Volver atras
+            </NuxtLink>
           </p>
-          <br />
-          <br />
-          <NuxtLink
-            to="/"
-            class="back-button text-rosa font-custom text-lg pt-40"
-          >
-            ← Volver atras
-          </NuxtLink>
         </div>
       </div>
 

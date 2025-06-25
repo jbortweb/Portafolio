@@ -6,15 +6,19 @@ import { onMounted } from "vue";
 gsap.registerPlugin(SplitText);
 
 onMounted(() => {
-  const splitText = new SplitText("#texto-proyecto", {
-    type: "words",
-  });
-  gsap.from(splitText.words, {
-    duration: 1,
+  // Asegura que los elementos estén ocultos al inicio
+  gsap.set("#texto-zen", { opacity: 0 });
+
+  const splitText1 = new SplitText("#texto-zen", { type: "words" });
+
+  gsap.to("#texto-zen", { opacity: 1, duration: 0.01 });
+  gsap.from(splitText1.words, {
+    opacity: 0,
+    duration: 0.5,
     y: 100,
     stagger: 0.1,
-    autoAlpha: 0,
     filter: "blur(10px)",
+    ease: "power2.out",
   });
 });
 </script>
@@ -57,36 +61,30 @@ onMounted(() => {
       <div
         class="col-span-2 row-span-5 col-start-3 row-start-1 p-6 rounded-xl backdrop-blur"
       >
-        <div
-          id="texto-proyecto"
-          class="flex flex-col h-full items-center justify-center px-4"
-        >
-          <p class="text-lg text-white font-custom">
+        <div class="flex flex-col h-full items-center justify-center px-4">
+          <p id="texto-zen" class="text-lg text-white font-custom opacity-0">
             <span class="text-rosa text-xl">Espacio Zen</span> es una web
             desarrollada con Nuxt.js y Vuetify en el frontend, y PHP en el panel
             de administración. Permite gestionar el blog de forma completa:
             crear, editar y eliminar artículos de manera ágil y segura.
-          </p>
-          <p class="text-lg text-white font-custom">
-            La página se integra con dos APIs externas: <br /><span
-              class="text-rosa text-xl"
-              >Instagram</span
-            >: muestra automáticamente las publicaciones subidas a la cuenta
-            oficial, manteniendo el contenido visual del sitio siempre
-            actualizado.<br />
+            <br /><br />
+            La página se integra con dos APIs externas: <br />
+            <span class="text-rosa text-xl">Instagram</span>: muestra
+            automáticamente las publicaciones subidas a la cuenta oficial,
+            manteniendo el contenido visual del sitio siempre actualizado.<br />
             <span class="text-rosa text-xl">ChatGPT</span>: ofrece un chat
             basado en IA, que permite a los usuarios realizar preguntas sobre
             los servicios y recibir respuestas instantáneas y relevantes.
+            <br />
+            <br />
+            <br />
+            <NuxtLink
+              to="/"
+              class="back-button text-rosa font-custom text-lg pt-40"
+            >
+              ← Volver atras
+            </NuxtLink>
           </p>
-
-          <br />
-          <br />
-          <NuxtLink
-            to="/"
-            class="back-button text-rosa font-custom text-lg pt-40"
-          >
-            ← Volver atras
-          </NuxtLink>
         </div>
       </div>
 
