@@ -90,7 +90,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="container-proyectos" class="relative top-[80dvh] md:top-0 pb-96">
+  <div id="container-proyectos" class="relative pb-96">
     <h3
       id="titulo-zen"
       class="relative -top-30 text-4xl sm:text-6xl font-custom font-semibold text-white text-center py-12"
@@ -104,7 +104,7 @@ onMounted(() => {
           class="flex-1 flex flex-col justify-center items-center"
         >
           <div
-            class="imagen-proyecto flex items-center justify-center w-[90%] md:w-[50%] h-[420px]"
+            class="imagen-proyecto flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
           >
             <a
               href="/espaciozen"
@@ -448,9 +448,5 @@ onMounted(() => {
 }
 .transition-img {
   transition: box-shadow 0.3s;
-}
-.transition-img:hover {
-  box-shadow: 0 0 0 8px #e6006b55;
-  /* Opcional: efecto visual al hacer hover */
 }
 </style>
