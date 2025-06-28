@@ -9,12 +9,13 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 onMounted(() => {
   const split = new SplitText("#presentacion", { type: "words" });
   const contacto = new SplitText("#contacto", { type: "words" });
+  const proyectos = new SplitText("#texto-proyectos", { type: "words" });
 
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#box",
       start: "top top",
-      end: "+=4200",
+      end: "+=4600",
       scrub: 1,
       pin: true,
     },
@@ -272,16 +273,71 @@ onMounted(() => {
       "#section4",
       {
         autoAlpha: 0,
-        duration: 0.7,
+        duration: 0.5,
       },
-      "+=2"
+      "+=1"
+    )
+    .to(
+      "#seccion5",
+      {
+        autoAlpha: 1,
+        duration: 1,
+        onStart: () => {
+          document.getElementById("seccion5").style.pointerEvents = "auto";
+        },
+      },
+      "-=0.5"
+    )
+    .to(
+      "#picture-seccion5",
+      {
+        scale: 1,
+        duration: 1.5,
+        ease: "power3.out",
+      },
+      ">"
+    )
+    .fromTo(
+      "#container-proyectos",
+      {
+        autoAlpha: 0,
+        y: 100,
+      },
+      {
+        autoAlpha: 1,
+        y: 0,
+        backgroundColor: "rgba(0, 0, 0, 0.8)",
+        duration: 1.8,
+      },
+      ">+=0.3"
+    )
+    .to(
+      "#titulo-proyectos",
+      {
+        color: "#e6006b",
+        duration: 1,
+        scale: 1.1,
+      },
+      ">"
+    )
+    .from(
+      proyectos.words,
+      {
+        autoAlpha: 0,
+        x: 100,
+        filter: "blur(10px)",
+        stagger: 0.1,
+        duration: 1,
+        ease: "power2.out",
+      },
+      "-=1"
     );
 });
 </script>
 
 <template>
   <main>
-    <div class="h-[580dvh]">
+    <div class="h-[680dvh]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
@@ -440,7 +496,7 @@ onMounted(() => {
       </section>
       <section
         id="section4"
-        class="fixed inset-0 h-screen bg-[rgb(17,17,17)] opacity-0"
+        class="fixed inset-0 h-[99vh] bg-[rgb(17,17,17)] opacity-0"
       >
         <h3
           class="text-4xl sm:text-6xl font-custom font-semibold text-white absolute top-1/6 left-1/2 -translate-x-1/2 -translate-y-1/6"
@@ -507,8 +563,47 @@ onMounted(() => {
           </a>
         </div>
       </section>
+
+      <section
+        id="seccion5"
+        class="h-screen fixed inset-0 bg-[rgb(17,17,17)] opacity-0"
+      >
+        <img
+          id="picture-seccion5"
+          src="/img/proyectos/cuadros.webp"
+          alt="Proyectos"
+          class="w-full h-full object-auto scale-0"
+        />
+        <div
+          class="w-[50vw] h-screen text-center absolute top-0 right-0 opacity-0"
+          id="container-proyectos"
+        >
+          <h3
+            class="text-4xl w-full sm:text-4xl font-custom font-semibold text-white absolute top-10 left-1/2 -translate-x-1/2"
+            id="titulo-proyectos"
+          >
+            Algunos de mis proyectos
+          </h3>
+          <p
+            id="texto-proyectos"
+            class="w-[80%] relative top-30 left-1/2 -translate-x-1/2 font-custom text-xl sm:text-2xl break-words whitespace-pre-line text-white text-start m-auto"
+          >
+            Como desarrollador full stack, he trabajado en diversos proyectos
+            web centrados en la creación de interfaces modernas, funcionales y
+            optimizadas para distintos tipos de usuarios. He desarrollado
+            frontends con frameworks como Nuxt.js y React, utilizando Tailwind o
+            Vuetify para lograr diseños responsivos y atractivos. En el backend,
+            he implementado paneles de administración seguros con Laravel o
+            Firebase, integrando funcionalidades como gestión de productos,
+            pedidos y autenticación con Clerk. Todos los proyectos han sido
+            diseñados con una experiencia de usuario clara y un enfoque práctico
+            en la gestión de contenidos.
+          </p>
+        </div>
+      </section>
     </div>
-    <Proyecto />
+    <!-- 
+    <Proyecto /> -->
   </main>
 </template>
 
