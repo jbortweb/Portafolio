@@ -512,13 +512,21 @@ onMounted(() => {
         stagger: 0.5,
       },
       ">"
+    )
+    .to(
+      "#section9",
+      {
+        autoAlpha: 0,
+        duration: 2,
+      },
+      "+=2"
     );
 });
 </script>
 
 <template>
   <main>
-    <div class="h-[1100dvh]">
+    <div class="h-[1300dvh] md:h-[1100dvh]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
@@ -784,27 +792,27 @@ onMounted(() => {
       </section>
       <section
         id="section6"
-        class="fixed inset-0 h-[99vh] bg-[rgb(17,17,17)] opacity-0 flex items-center justify-center"
+        class="fixed inset-0 h-[99vh] bg-[rgb(17,17,17)] opacity-0 flex items-center justify-center z-70"
       >
         <article
-          class="flex flex-col md:flex-row w-full h-auto items-center justify-center"
+          class="flex w-full h-auto items-center justify-center relative z-20"
         >
           <div
             id="tele-zen"
-            class="flex-1 flex flex-col justify-center items-center"
+            class="flex-1 flex flex-col justify-center items-center z-30"
           >
             <div
-              class="flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
+              class="flex items-center justify-center w-[70%] sm:w-[50%] h-30 md:h-[420px] relative z-30"
             >
               <a
                 href="/espaciozen"
                 style="view-transition-name: espaciozen-img"
-                class="block transition-link"
+                class="block transition-link z-30"
               >
                 <img
                   src="/img/proyectos/telezen.webp"
                   alt="espaciozen.webp"
-                  class="w-full h-auto rounded-lg object-cover relative -top-5 transition-img cursor-pointer"
+                  class="w-full h-auto rounded-lg object-cover relative -top-5 transition-img cursor-pointer z-30"
                   style="view-transition-name: espaciozen-img"
                 />
               </a>
@@ -819,46 +827,48 @@ onMounted(() => {
           </div>
           <div class="flex-1 flex flex-col justify-center items-center">
             <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
-              <p class="texto-zen text-4xl font-custom text-rosa">
+              <p class="texto-zen text-2xl md:text-4xl font-custom text-rosa">
                 Proyecto:
-                <strong class="strong-zen text-black text-2xl"
+                <strong class="strong-zen text-black text-lg md:text-2xl"
                   >Espacio Zen</strong
                 >
               </p>
-              <p class="texto-zen text-2xl text-rosa font-custom">
+              <p class="texto-zen text-xl md:text-2xl text-rosa font-custom">
                 Tecnologías front-end:
-                <strong class="strong-zen text-black text-lg"
+                <strong class="strong-zen text-black text-sm md:text-lg"
                   >Nuxt.js + Vuetify</strong
                 >
               </p>
-              <p class="texto-zen font-custom text-2xl text-rosa">
+              <p class="texto-zen font-custom text-xl md:text-2xl text-rosa">
                 Tecnologías back-end:
-                <strong class="strong-zen text-black text-lg">PHP</strong>
+                <strong class="strong-zen text-black text-sm md:text-lg"
+                  >PHP</strong
+                >
               </p>
               <br />
               <p
-                class="texto-zen block mt-2 mb-1 text-start w-full text-2xl text-rosa font-custom"
+                class="texto-zen block mt-2 mb-1 text-start w-full text-xl md:text-2xl text-rosa font-custom"
               >
                 Características principales:
               </p>
               <ul class="w-full flex flex-col items-start gap-2 font-custom">
                 <li
-                  class="strong-zen w-full text-start text-lg text-black list-none"
+                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
                 >
                   - Interfaz de usuario intuitiva y responsiva
                 </li>
                 <li
-                  class="strong-zen w-full text-start text-lg text-black list-none"
+                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
                 >
                   - Gestión completa de artículos (alta, edición y baja)
                 </li>
                 <li
-                  class="strong-zen w-full text-start text-lg text-black list-none"
+                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
                 >
                   - Integración con API de Instagram
                 </li>
                 <li
-                  class="strong-zen w-full text-start text-lg text-black list-none"
+                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
                 >
                   - Consultas a la API de ChatGPT
                 </li>
@@ -870,51 +880,57 @@ onMounted(() => {
 
       <section
         id="section7"
-        class="fixed inset-0 h-[99vh] bg-white opacity-0 flex items-center justify-center"
+        class="fixed inset-0 h-[99vh] bg-white opacity-0 flex items-center justify-center z-60"
       >
         <article
-          class="flex flex-col md:flex-row w-full h-auto items-center justify-center"
+          class="flex w-full h-auto items-center justify-center relative z-20"
         >
           <div class="flex-1 flex flex-col justify-center items-center">
             <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
-              <p class="texto-maduixa text-4xl font-custom text-rosa">
+              <p
+                class="texto-maduixa text-xl md:text-2xl font-custom text-rosa"
+              >
                 Proyecto:
-                <strong class="strong-maduixa text-white text-2xl"
+                <strong class="strong-maduixa text-white text-xl md:text-4xl"
                   >Lencería Maduixa</strong
                 >
               </p>
-              <p class="texto-maduixa text-2xl text-rosa font-custom">
+              <p
+                class="texto-maduixa text-xl md:text-2xl text-rosa font-custom"
+              >
                 Tecnologías front-end:
-                <strong class="strong-maduixa text-white text-lg"
+                <strong class="strong-maduixa text-white text-sm md:text-lg"
                   >Nuxt + Tailwind</strong
                 >
               </p>
-              <p class="texto-maduixa font-custom text-2xl text-rosa">
+              <p
+                class="texto-maduixa font-custom text-xl md:text-2xl text-rosa"
+              >
                 Tecnologías back-end:
-                <strong class="strong-maduixa text-white text-lg"
+                <strong class="strong-maduixa text-white text-sm md:text-lg"
                   >Laravel y Clerk</strong
                 >
               </p>
               <br />
               <p
-                class="texto-maduixa block mt-2 mb-1 text-start w-full text-2xl text-rosa font-custom"
+                class="texto-maduixa block mt-2 mb-1 text-start w-full text-xl md:text-2xl text-rosa font-custom"
               >
                 Características principales:
               </p>
               <ul class="w-full flex flex-col items-start gap-2 font-custom">
                 <li
-                  class="strong-maduixa w-full text-start text-lg text-white list-none"
+                  class="strong-maduixa w-full text-start text-sm md:text-lg text-white list-none"
                 >
                   - Interfaz para clientes: catálogo de productos con imágenes,
                   descripción y precios.
                 </li>
                 <li
-                  class="strong-maduixa w-full text-start text-lg text-white list-none"
+                  class="strong-maduixa w-full text-start text-sm md:text-lg text-white list-none"
                 >
                   - Integración de Clerk para autentificación del administrador.
                 </li>
                 <li
-                  class="strong-maduixa w-full text-start text-lg text-white list-none"
+                  class="strong-maduixa w-full text-start text-sm md:text-lg text-white list-none"
                 >
                   - Gestión de productos vía administrador: alta, edición y baja
                 </li>
@@ -923,20 +939,20 @@ onMounted(() => {
           </div>
           <div
             id="tele-maduixa"
-            class="flex-1 flex flex-col justify-center items-center"
+            class="flex-1 flex flex-col justify-center items-center z-30"
           >
             <div
-              class="flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
+              class="flex items-center justify-center w-[70%] sm:w-[50%] h-30 md:h-[420px] relative z-30"
             >
               <a
                 href="/maduixa"
                 style="view-transition-name: maduixa-img"
-                class="block transition-link"
+                class="block transition-link z-30"
               >
                 <img
                   src="/img/proyectos/telemaduixa.webp"
                   alt="Foto de inicio de maduixa"
-                  class="w-full h-auto rounded-lg object-cover relative -top-10 transition-img cursor-pointer"
+                  class="w-full h-auto rounded-lg object-cover relative -top-10 transition-img cursor-pointer z-30"
                   style="view-transition-name: maduixa-img"
                 />
               </a>
@@ -951,30 +967,29 @@ onMounted(() => {
           </div>
         </article>
       </section>
-
       <section
         id="section8"
-        class="fixed inset-0 h-[99vh] bg-[rgb(17,17,17)] opacity-0 flex items-center justify-center"
+        class="fixed inset-0 h-[99vh] bg-[rgb(17,17,17)] opacity-0 flex items-center justify-center z-20"
       >
         <article
-          class="flex flex-col md:flex-row w-full h-auto items-center justify-center"
+          class="flex w-full h-auto items-center justify-center relative z-20"
         >
           <div
             id="tele-planterra"
-            class="flex-1 flex flex-col justify-center items-center"
+            class="flex-1 flex flex-col justify-center items-center z-30"
           >
             <div
-              class="flex items-center justify-center w-[80%] sm:w-[50%] h-[420px]"
+              class="flex items-center justify-center w-[80%] sm:w-[50%] h-30 md:h-[420px] relative z-30"
             >
               <a
                 href="/planterra"
                 style="view-transition-name: planterra-img"
-                class="block transition-link"
+                class="block transition-link z-30"
               >
                 <img
                   src="/img/proyectos/teleplanterra.webp"
                   alt="Imagen web planterra"
-                  class="w-full h-auto rounded-lg object-cover relative -top-10 transition-img cursor-pointer"
+                  class="w-full h-auto rounded-lg object-cover relative -top-10 transition-img cursor-pointer z-30"
                   style="view-transition-name: planterra-img"
                 />
               </a>
@@ -989,49 +1004,55 @@ onMounted(() => {
           </div>
           <div class="flex-1 flex flex-col justify-end items-center">
             <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
-              <p class="texto-planterra text-4xl font-custom text-rosa">
+              <p
+                class="texto-planterra text-2xl md:text-4xl font-custom text-rosa"
+              >
                 Proyecto:
-                <strong class="strong-planterra text-black text-2xl"
+                <strong class="strong-planterra text-black text-xl md:text-2xl"
                   >Planterra</strong
                 >
               </p>
-              <p class="texto-planterra text-2xl text-rosa font-custom">
+              <p
+                class="texto-planterra text-xl md:text-2xl text-rosa font-custom"
+              >
                 Tecnologías front-end:
-                <strong class="strong-planterra text-black text-lg"
+                <strong class="strong-planterra text-black text-sm md:text-lg"
                   >Nuxt.js + Tailwind
                 </strong>
               </p>
-              <p class="texto-planterra font-custom text-2xl text-rosa">
+              <p
+                class="texto-planterra font-custom text-xl md:text-2xl text-rosa"
+              >
                 Tecnologías back-end:
-                <strong class="strong-planterra text-black text-lg"
+                <strong class="strong-planterra text-black text-sm md:text-lg"
                   >Firebase</strong
                 >
               </p>
               <br />
               <p
-                class="texto-planterra block mt-2 mb-1 text-start w-full text-2xl text-rosa font-custom"
+                class="texto-planterra block mt-2 mb-1 text-start w-full text-xl md:text-2xl text-rosa font-custom"
               >
                 Características principales:
               </p>
               <ul class="w-full flex flex-col items-start gap-2 font-custom">
                 <li
-                  class="strong-planterra w-full text-start text-lg text-black list-none"
+                  class="strong-planterra w-full text-start text-sm md:text-lg text-black list-none"
                 >
                   - Interfaz de cliente intuitiva y responsiva
                 </li>
                 <li
-                  class="strong-planterra w-full text-start text-lg text-black list-none"
+                  class="strong-planterra w-full text-start text-sm md:text-lg text-black list-none"
                 >
                   - Gestión de Productos: Añade, edita y elimina productos.
                 </li>
                 <li
-                  class="strong-planterra w-full text-start text-lg text-black list-none"
+                  class="strong-planterra w-full text-start text-sm md:text-lg text-black list-none"
                 >
                   - Gestión de Pedidos: Visualiza y administra todos los pedidos
                   realizados.
                 </li>
                 <li
-                  class="strong-planterra w-full text-start text-lg text-black list-none"
+                  class="strong-planterra w-full text-start text-sm md:text-lg text-black list-none"
                 >
                   - Calendario de Pedidos: Visualiza los pedidos organizados por
                   día
@@ -1046,48 +1067,48 @@ onMounted(() => {
         id="section9"
         class="fixed inset-0 h-[99vh] bg-white opacity-0 flex items-center justify-center"
       >
-        <article
-          class="flex flex-col md:flex-row w-full h-auto items-center justify-center"
-        >
+        <article class="flex w-full h-auto items-center justify-center">
           <div class="flex-1 flex flex-col justify-center items-center">
             <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
-              <p class="texto-cafe text-4xl font-custom text-rosa">
+              <p class="texto-cafe text-xl md:text-4xl font-custom text-rosa">
                 Proyecto:
-                <strong class="strong-cafe text-white text-2xl"
+                <strong class="strong-cafe text-white text-xl md:text-2xl"
                   >Café JBortWeb</strong
                 >
               </p>
-              <p class="texto-cafe text-2xl text-rosa font-custom">
+              <p class="texto-cafe text-xl md:text-2xl text-rosa font-custom">
                 Tecnologías front-end:
-                <strong class="strong-cafe text-white text-lg"
+                <strong class="strong-cafe text-white text-sm md:text-lg"
                   >React + Tailwind</strong
                 >
               </p>
-              <p class="texto-cafe font-custom text-2xl text-rosa">
+              <p class="texto-cafe font-custom text-xl md:text-2xl text-rosa">
                 Tecnologías back-end:
-                <strong class="strong-cafe text-white text-lg">Laravel</strong>
+                <strong class="strong-cafe text-white text-sm md:text-lg"
+                  >Laravel</strong
+                >
               </p>
               <br />
               <p
-                class="texto-cafe block mt-2 mb-1 text-start w-full text-2xl text-rosa font-custom"
+                class="texto-cafe block mt-2 mb-1 text-start w-full text-xl md:text-2xl text-rosa font-custom"
               >
                 Características principales:
               </p>
               <ul class="w-full flex flex-col items-start gap-2 font-custom">
                 <li
-                  class="strong-cafe w-full text-start text-lg text-white list-none"
+                  class="strong-cafe w-full text-start text-sm md:text-lg text-white list-none"
                 >
                   - Interfaz para clientes: catálogo de productos con imágenes,
                   descripción y precios.
                 </li>
                 <li
-                  class="strong-cafe w-full text-start text-lg text-white list-none"
+                  class="strong-cafe w-full text-start text-sm md:text-lg text-white list-none"
                 >
                   - Carrito de compras: selección, edición de cantidades y total
                   actualizado.
                 </li>
                 <li
-                  class="strong-cafe w-full text-start text-lg text-white list-none"
+                  class="strong-cafe w-full text-start text-sm md:text-lg text-white list-none"
                 >
                   - Gestión de productos vía administrador: alta, edición y baja
                 </li>
@@ -1099,7 +1120,7 @@ onMounted(() => {
             class="flex-1 flex flex-col justify-center items-center"
           >
             <div
-              class="flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
+              class="flex items-center justify-center w-[70%] sm:w-[50%] h-30 md:h-[420px]"
             >
               <a
                 href="/cafe"

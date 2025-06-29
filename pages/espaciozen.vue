@@ -6,120 +6,126 @@ import { onMounted } from "vue";
 gsap.registerPlugin(SplitText);
 
 onMounted(() => {
-  // Asegura que los elementos estén ocultos al inicio
-  gsap.set("#texto-zen", { opacity: 0 });
-
-  const splitText1 = new SplitText("#texto-zen", { type: "words" });
-
-  gsap.to("#texto-zen", { opacity: 1, duration: 0.01 });
-  gsap.from(splitText1.words, {
-    opacity: 0,
-    duration: 0.5,
+  const splitText = new SplitText("#texto-proyecto-zen", {
+    type: "words",
+  });
+  gsap.from(splitText.words, {
+    duration: 1,
     y: 100,
     stagger: 0.1,
+    autoAlpha: 0,
     filter: "blur(10px)",
-    ease: "power2.out",
   });
 });
 </script>
 
 <template>
   <div class="min-h-screen flex items-center justify-center p-4">
-    <div class="grid grid-cols-6 grid-rows-5 gap-6 max-w-screen-xl w-full">
-      <div class="col-span-2 row-span-2 p-6 teleborde hover:scale-125 z-60">
-        <a
-          href="https://espaciozensjm.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div
+      class="w-[95%] md:w-full max-w-screen-xl flex flex-col gap-6 pt-8 md:grid md:grid-cols-6 md:grid-rows-5 md:gap-6 md:pt-0"
+    >
+      <!-- Imágenes superiores -->
+      <div class="flex gap-4 md:contents">
+        <div
+          class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:p-6 md:block"
         >
-          <img
-            src="/img/proyectos/espaciozen.webp"
-            alt="espaciozen.webp"
-            class="w-full h-auto object-cover rounded-lg"
-            style="view-transition-name: espaciozen-img"
-          />
-        </a>
-      </div>
-
-      <div
-        class="col-span-2 row-span-2 col-start-1 row-start-4 p-6 rounded-xl backdrop-blur teleborde hover:scale-125 z-60"
-      >
-        <a
-          href="https://espaciozensjm.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+          <a
+            href="https://espaciozensjm.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/img/proyectos/adminzen.webp"
+              alt="Imagen de la web de Espacio Zen"
+              class="w-full h-auto object-cover rounded-lg"
+              style="view-transition-name: espaciozen-img"
+            />
+          </a>
+        </div>
+        <div
+          class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-4 md:p-6 md:block"
         >
-          <img
-            src="/img/proyectos/login.webp"
-            alt="espaciozen.webp"
-            class="w-full h-auto rounded-lg object-cover"
-            style="view-transition-name: espaciozen-img"
-          />
-        </a>
-      </div>
-
-      <div
-        class="col-span-2 row-span-5 col-start-3 row-start-1 p-6 rounded-xl backdrop-blur"
-      >
-        <div class="flex flex-col h-full items-center justify-center px-4">
-          <p id="texto-zen" class="text-lg text-white font-custom opacity-0">
-            <span class="text-rosa text-xl">Espacio Zen</span> es una web
-            desarrollada con Nuxt.js y Vuetify en el frontend, y PHP en el panel
-            de administración. Permite gestionar el blog de forma completa:
-            crear, editar y eliminar artículos de manera ágil y segura.
-            <br /><br />
-            La página se integra con dos APIs externas: <br />
-            <span class="text-rosa text-xl">Instagram</span>: muestra
-            automáticamente las publicaciones subidas a la cuenta oficial,
-            manteniendo el contenido visual del sitio siempre actualizado.<br />
-            <span class="text-rosa text-xl">ChatGPT</span>: ofrece un chat
-            basado en IA, que permite a los usuarios realizar preguntas sobre
-            los servicios y recibir respuestas instantáneas y relevantes.
-            <br />
-            <br />
-            <br />
-            <NuxtLink
-              to="/"
-              class="back-button text-rosa font-custom text-lg pt-40"
-            >
-              ← Volver atras
-            </NuxtLink>
-          </p>
+          <a
+            href="https://espaciozensjm.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/img/proyectos/chat.webp"
+              alt="Imagen de la web de Espacio Zen"
+              class="w-full h-auto rounded-lg object-cover"
+              style="view-transition-name: espaciozen-img"
+            />
+          </a>
         </div>
       </div>
-
+      <!-- Texto central -->
       <div
-        class="col-span-2 row-span-2 col-start-5 teleborde hover:scale-125 z-60 row-start-1 p-6"
+        class="p-4 rounded-xl backdrop-blur flex flex-col items-center justify-center md:col-span-2 md:row-span-5 md:col-start-3 md:row-start-1 md:p-6"
       >
-        <a
-          href="https://espaciozensjm.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          id="texto-proyecto-zen"
+          class="flex flex-col h-full items-center justify-center px-4"
         >
-          <img
-            src="/img/proyectos/adminzen.webp"
-            alt="espaciozen.webp"
-            class="w-full h-auto rounded-lg object-cover"
-            style="view-transition-name: espaciozen-img"
-          />
-        </a>
+          <p class="text-lg text-white font-custom">
+            <span class="text-rosa text-xl">Espacio Zen</span> es una web
+            desarrollada con Nuxt.js y Vuetify en el frontend, y PHP en el
+            backend. Permite la gestión de artículos, integración con Instagram
+            y consultas a la API de ChatGPT, todo con una interfaz moderna y
+            adaptable.
+          </p>
+          <p class="text-lg text-white font-custom">
+            La página cuenta con dos vistas:<br />
+            <span class="text-rosa text-xl">Cliente</span>: puede consultar
+            artículos, novedades y publicaciones de Instagram.<br />
+            <span class="text-rosa text-xl">Administrador</span>: permite crear,
+            editar y eliminar artículos, así como gestionar la integración con
+            Instagram y ChatGPT.
+          </p>
+          <br />
+          <br />
+          <NuxtLink
+            to="/"
+            class="back-button text-rosa font-custom text-lg pt-40"
+          >
+            ← Volver atras
+          </NuxtLink>
+        </div>
       </div>
-
-      <div
-        class="col-span-2 row-span-2 col-start-5 row-start-4 p-6 backdrop-blur teleborde hover:scale-125 z-60"
-      >
-        <a
-          href="https://espaciozensjm.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+      <!-- Imágenes inferiores -->
+      <div class="flex gap-4 md:contents">
+        <div
+          class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:col-start-5 md:row-start-1 md:p-6 md:block"
         >
-          <img
-            src="/img/proyectos/chat.webp"
-            alt="espaciozen.webp"
-            class="w-full h-auto rounded-lg object-cover"
-            style="view-transition-name: espaciozen-img"
-          />
-        </a>
+          <a
+            href="https://espaciozensjm.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/img/proyectos/espaciozen.webp"
+              alt="Imagen de la web de Espacio Zen"
+              class="w-full h-auto rounded-lg object-cover"
+              style="view-transition-name: espaciozen-img"
+            />
+          </a>
+        </div>
+        <div
+          class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:col-start-5 md:row-start-4 md:p-6 md:block"
+        >
+          <a
+            href="https://espaciozensjm.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/img/proyectos/login.webp"
+              alt="Imagen de la web de Espacio Zen"
+              class="w-full h-auto rounded-lg object-cover"
+              style="view-transition-name: espaciozen-img"
+            />
+          </a>
+        </div>
       </div>
     </div>
   </div>
