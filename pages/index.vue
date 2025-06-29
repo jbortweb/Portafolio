@@ -14,7 +14,7 @@ onMounted(() => {
   // Detecta si es tablet (md) y ajusta el valor de end
   let scrollEnd = "+=8500";
   if (window.matchMedia("(min-width: 768px) and (max-width: 1023px)").matches) {
-    scrollEnd = "+=9500"; // aumenta el scroll en tablets
+    scrollEnd = "+=9000"; // aumenta el scroll en tablets
   }
 
   const tl = gsap.timeline({
@@ -532,7 +532,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <div class="h-[1200dvh] md:h[1280dvh] lg:h-[1090dvh]">
+    <div class="h-[1200dvh] md:h[1480dvh] lg:h-[1090dvh]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
