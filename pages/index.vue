@@ -11,11 +11,17 @@ onMounted(() => {
   const contacto = new SplitText("#contacto", { type: "words" });
   const proyectos = new SplitText("#texto-proyectos", { type: "words" });
 
+  // Detecta si es tablet (md) y ajusta el valor de end
+  let scrollEnd = "+=8500";
+  if (window.matchMedia("(min-width: 768px) and (max-width: 1023px)").matches) {
+    scrollEnd = "+=9500"; // aumenta el scroll en tablets
+  }
+
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#box",
       start: "top top",
-      end: "+=8000",
+      end: scrollEnd,
       scrub: 1,
       pin: true,
     },
@@ -517,7 +523,7 @@ onMounted(() => {
       "#section9",
       {
         autoAlpha: 0,
-        duration: 2,
+        duration: 3,
       },
       "+=2"
     );
@@ -526,7 +532,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <div class="h-[1200dvh] md:h[1200dvh] lg:h-[1030dvh]">
+    <div class="h-[1180dvh] md:h[1280dvh] lg:h-[1090dvh]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
