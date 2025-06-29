@@ -29,6 +29,11 @@ onMounted(() => {
         <div
           class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:p-6 md:block"
         >
+          <a
+            href="https://cafe-jbortweb.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
           <img
             src="/img/proyectos/editcafe.webp"
             alt="Imagen de la web de cafereact"
@@ -39,6 +44,11 @@ onMounted(() => {
         <div
           class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-4 md:p-6 md:block"
         >
+          <a
+            href="https://cafe-jbortweb.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
           <img
             src="/img/proyectos/pedidoscafe.webp"
             alt="Imagen de la web de cafereact"
@@ -88,6 +98,11 @@ onMounted(() => {
         <div
           class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:col-start-5 md:row-start-1 md:p-6 md:block"
         >
+          <a
+            href="https://cafe-jbortweb.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
           <img
             src="/img/proyectos/cafereact.webp"
             alt="Imagen de la web de cafereact"
@@ -98,6 +113,11 @@ onMounted(() => {
         <div
           class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:col-start-5 md:row-start-4 md:p-6 md:block"
         >
+          <a
+            href="https://cafe-jbortweb.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
           <img
             src="/img/proyectos/pedidoscliente.webp"
             alt="Imagen de la web de cafereact"
