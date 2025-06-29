@@ -756,18 +756,18 @@ onMounted(() => {
           class="w-full h-full object-auto scale-0"
         />
         <div
-          class="w-[50vw] h-screen text-center absolute top-0 right-0 opacity-0"
+          class="w-[100vw] sm:w-[50vw] h-screen text-center absolute top-0 right-0 opacity-0"
           id="container-proyectos"
         >
           <h3
-            class="text-4xl w-full sm:text-4xl font-custom font-semibold text-white absolute top-10 left-1/2 -translate-x-1/2"
+            class="text-2xl w-full sm:text-4xl font-custom font-semibold text-white absolute top-10 left-1/2 -translate-x-1/2"
             id="titulo-proyectos"
           >
             Algunos de mis proyectos
           </h3>
           <p
             id="texto-proyectos"
-            class="w-[80%] relative top-30 left-1/2 -translate-x-1/2 font-custom text-xl sm:text-2xl break-words whitespace-pre-line text-white text-start m-auto"
+            class="w-[80%] relative top-30 left-1/2 -translate-x-1/2 font-custom text-lg sm:text-2xl break-words whitespace-pre-line text-white text-start m-auto"
           >
             Como desarrollador full stack, he trabajado en diversos proyectos
             web centrados en la creación de interfaces modernas, funcionales y
