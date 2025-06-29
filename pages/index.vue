@@ -15,7 +15,7 @@ onMounted(() => {
     scrollTrigger: {
       trigger: "#box",
       start: "top top",
-      end: "+=4600",
+      end: "+=8000",
       scrub: 1,
       pin: true,
     },
@@ -44,13 +44,13 @@ onMounted(() => {
         maskSize: "clamp(20vh, 25%, 30vh)",
         duration: 2,
       },
-      0.15
+      0.25
     )
     .to(
       "#picture",
       {
         opacity: 0.1,
-        duration: 0.5,
+        duration: 2,
       },
       2.5
     )
@@ -186,15 +186,19 @@ onMounted(() => {
       },
       "-=1"
     )
-    .to("#section3", {
-      autoAlpha: 0,
-      scale: 0.97,
-      duration: 0.7,
-      onStart: () => {
-        const s3 = document.getElementById("section3");
-        if (s3) s3.style.pointerEvents = "none";
+    .to(
+      "#section3",
+      {
+        autoAlpha: 0,
+        scale: 0.97,
+        duration: 0.7,
+        onStart: () => {
+          const s3 = document.getElementById("section3");
+          if (s3) s3.style.pointerEvents = "none";
+        },
       },
-    })
+      "+=1"
+    )
     .to(
       "#section4",
       {
@@ -514,7 +518,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <div class="h-[680dvh]">
+    <div class="h-[1100dvh]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
