@@ -794,7 +794,7 @@ onMounted(() => {
             class="flex-1 flex flex-col justify-center items-center"
           >
             <div
-              class="imagen-proyecto flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
+              class="flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
             >
               <a
                 href="/espaciozen"
@@ -802,9 +802,9 @@ onMounted(() => {
                 class="block transition-link"
               >
                 <img
-                  src="/img/proyectos/espaciozen.webp"
+                  src="/img/proyectos/telezen.webp"
                   alt="espaciozen.webp"
-                  class="w-56 h-40 rounded-lg object-cover relative top-10 right-7.5 transition-img cursor-pointer"
+                  class="w-full h-auto rounded-lg object-cover relative -top-5 transition-img cursor-pointer"
                   style="view-transition-name: espaciozen-img"
                 />
               </a>
@@ -926,7 +926,7 @@ onMounted(() => {
             class="flex-1 flex flex-col justify-center items-center"
           >
             <div
-              class="imagen-proyecto flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
+              class="flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
             >
               <a
                 href="/maduixa"
@@ -934,9 +934,9 @@ onMounted(() => {
                 class="block transition-link"
               >
                 <img
-                  src="/img/proyectos/maduixa.webp"
+                  src="/img/proyectos/telemaduixa.webp"
                   alt="Foto de inicio de maduixa"
-                  class="w-56 h-40 rounded-lg object-cover relative top-10 right-7.5 transition-img cursor-pointer"
+                  class="w-full h-auto rounded-lg object-cover relative -top-10 transition-img cursor-pointer"
                   style="view-transition-name: maduixa-img"
                 />
               </a>
@@ -964,7 +964,7 @@ onMounted(() => {
             class="flex-1 flex flex-col justify-center items-center"
           >
             <div
-              class="imagen-proyecto flex items-center justify-center w-[80%] sm:w-[50%] h-[420px]"
+              class="flex items-center justify-center w-[80%] sm:w-[50%] h-[420px]"
             >
               <a
                 href="/planterra"
@@ -972,9 +972,9 @@ onMounted(() => {
                 class="block transition-link"
               >
                 <img
-                  src="/img/proyectos/planterratienda.webp"
+                  src="/img/proyectos/teleplanterra.webp"
                   alt="Imagen web planterra"
-                  class="w-56 h-40 rounded-lg object-cover relative top-10 right-7.5 transition-img cursor-pointer"
+                  class="w-full h-auto rounded-lg object-cover relative -top-10 transition-img cursor-pointer"
                   style="view-transition-name: planterra-img"
                 />
               </a>
@@ -1099,7 +1099,7 @@ onMounted(() => {
             class="flex-1 flex flex-col justify-center items-center"
           >
             <div
-              class="imagen-proyecto flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
+              class="flex items-center justify-center w-[70%] sm:w-[50%] h-[420px]"
             >
               <a
                 href="/cafe"
@@ -1107,9 +1107,9 @@ onMounted(() => {
                 class="block transition-link"
               >
                 <img
-                  src="/img/proyectos/cafereact.webp"
+                  src="/img/proyectos/telecafe.webp"
                   alt="cafereact.webp"
-                  class="w-56 h-40 rounded-lg object-cover relative top-10 right-7.5 transition-img cursor-pointer"
+                  class="w-full h-auto rounded-lg object-cover relative -top-10 transition-img cursor-pointer"
                   style="view-transition-name: cafe-img"
                 />
               </a>
@@ -1156,18 +1156,5 @@ onMounted(() => {
 }
 .perfil:hover {
   border: 8px solid #1e40af !important;
-}
-.imagen-proyecto {
-  background-image: url("/img/proyectos/tele.webp");
-  background-size: cover;
-  background-position: center;
-  border-radius: 16px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.45))
-    drop-shadow(0 0 8px rgba(255, 255, 255, 0.18))
-    drop-shadow(0 0 16px rgba(255, 255, 255, 0.12))
-    drop-shadow(0 0 24px rgba(255, 255, 255, 0.08))
-    drop-shadow(0 0 32px rgba(255, 255, 255, 0.05));
 }
 </style>
