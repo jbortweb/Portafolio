@@ -4,22 +4,26 @@
 <template>
   <div>
     <main>
-      <article id="furiosa_poster">
-        <header id="furiosa_poster__header">
-          <h1 id="furiosa_poster__header__title" data-title="JBORTWEB">
+      <article id="footer-poster">
+        <header id="footer-poster__header">
+          <h1 id="footer-poster__header__title" data-title="JBORTWEB">
             JBORTWEB
           </h1>
         </header>
-        <p id="furiosa_poster__anya">Director:</p>
+        <p id="footer-poster__anya">Director:</p>
 
-        <img src="/img/logonegro.svg" id="furiosa_poster__chris" />
-        <p id="furiosa_poster__george">FullStack <strong>Developer</strong></p>
-        <p id="furiosa_poster__mad_max_saga">
+        <img
+          src="/img/logonegro.svg"
+          alt="Logo jbortweb"
+          id="footer-poster__logo"
+        />
+        <p id="footer-poster__oficio">FullStack <strong>Developer</strong></p>
+        <p id="footer-poster__stack">
           <span data-title="NUXT 3">NUXT 3</span>
           <span data-title="GSAP">GSAP</span>
         </p>
         <img
-          id="furiosa_poster__front_image"
+          id="footer-poster__front_image"
           src="/img/habita.webp"
           alt="Furiosa Front image"
         />
@@ -110,7 +114,7 @@ main {
   min-height: 100vh;
   perspective: 1000px;
 }
-#furiosa_poster {
+#footer-poster {
   aspect-ratio: 9/14;
   background: center / cover no-repeat url("/img/habita.webp");
   width: 100%;
@@ -120,7 +124,7 @@ main {
   transform-style: preserve-3d;
   border-radius: 6vmin;
 }
-#furiosa_poster__header {
+#footer-poster__header {
   position: absolute;
   top: 30%;
   left: 0;
@@ -131,7 +135,7 @@ main {
   transform: translateZ(10vmin);
   transform-style: preserve-3d;
 }
-#furiosa_poster__header__title {
+#footer-poster__header__title {
   font-family: "Agency FB Black";
   font-size: 22vmin;
   position: absolute;
@@ -144,7 +148,7 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-#furiosa_poster__header__title::before {
+#footer-poster__header__title::before {
   content: attr(data-title);
   position: absolute;
   color: #ffc61c5e;
@@ -153,7 +157,7 @@ main {
   opacity: 1;
   text-shadow: 0px 0px 4vmin rgba(0, 0, 0, 0.4), 1px 1px #bf4528;
 }
-#furiosa_poster__front_image {
+#footer-poster__front_image {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -165,7 +169,7 @@ main {
   border-radius: 6vmin;
 }
 
-#furiosa_poster__anya {
+#footer-poster__anya {
   font-family: "Agency FB Black";
   font-size: 2.6vmin;
   letter-spacing: 0.1em;
@@ -179,7 +183,7 @@ main {
   transform-style: preserve-3d;
   margin: 0;
 }
-#furiosa_poster__chris {
+#footer-poster__logo {
   font-family: "Agency FB Black";
   width: 15vmin;
   letter-spacing: 0.1em;
@@ -193,7 +197,7 @@ main {
   transform-style: preserve-3d;
   margin: 0;
 }
-#furiosa_poster__george {
+#footer-poster__oficio {
   font-family: "Agency FB Regular";
   font-size: 2.5vmin;
   text-transform: uppercase;
@@ -208,10 +212,10 @@ main {
   transform-style: preserve-3d;
   margin: 0;
 }
-#furiosa_poster__george strong {
+#footer-poster__oficio strong {
   font-family: "Agency FB Black";
 }
-#furiosa_poster__mad_max_saga {
+#footer-poster__stack {
   display: flex;
   justify-content: space-between;
   font-family: "Agency FB Black";
@@ -230,7 +234,7 @@ main {
   /* transform-style: preserve-3d; */
   /* text-shadow: 0px 0px 4vmin rgba(0,0,0,0.4); */
 }
-#furiosa_poster__mad_max_saga > span {
+#footer-poster__stack > span {
   display: flex;
   background-image: url("/img/degradado.webp");
   background-size: cover;
@@ -238,7 +242,7 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-#furiosa_poster__mad_max_saga > span::before {
+#footer-poster__stack > span::before {
   content: attr(data-title);
   position: absolute;
   color: #ffc61c5e;
