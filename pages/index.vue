@@ -942,7 +942,7 @@ onMounted(() => {
             class="flex-1 flex flex-col justify-center items-center z-30"
           >
             <div
-              class="flex items-center justify-center w-[70%] sm:w-[50%] h-30 md:h-[420px] relative z-30"
+              class="flex items-center justify-center w-[70%] sm:w-[50%] h-30 md:h-[420px] z-30"
             >
               <a
                 href="/maduixa"
@@ -962,7 +962,7 @@ onMounted(() => {
               target="_blank"
               rel="noopener noreferrer"
               class="text-2xl font-bold mt-8 text-rosa text-custom"
-              >Lencería Maduixa
+              >Maduixa
             </a>
           </div>
         </article>
