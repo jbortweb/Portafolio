@@ -3,14 +3,14 @@
 
 <template>
   <div>
-    <main>
+    <main id="container-footer">
       <article id="footer-poster">
         <header id="footer-poster__header">
           <h1 id="footer-poster__header__title" data-title="JBORTWEB">
             JBORTWEB
           </h1>
         </header>
-        <p id="footer-poster__anya">Director:</p>
+        <p id="footer-poster__director">Director:</p>
 
         <img
           src="/img/logonegro.svg"
@@ -24,15 +24,13 @@
         </p>
         <img
           id="footer-poster__front_image"
-          src="/img/habita.webp"
+          src="/img/ladorecortado.webp"
           alt="Furiosa Front image"
         />
       </article>
     </main>
     <nav>
-      <a href="https://www.furiosaamadmaxsaga.com/" target="_blank"
-        >Página oficial</a
-      >
+      <a href="https://jbortweb.netlify.app/" target="_blank">Página oficial</a>
     </nav>
   </div>
 </template>
@@ -140,6 +138,7 @@ main {
   font-size: 22vmin;
   position: absolute;
   margin: 0;
+  top: -100px;
   line-height: 1em;
   white-space: nowrap;
   background-image: url("/img/degradado.webp");
@@ -169,7 +168,7 @@ main {
   border-radius: 6vmin;
 }
 
-#footer-poster__anya {
+#footer-poster__director {
   font-family: "Agency FB Black";
   font-size: 2.6vmin;
   letter-spacing: 0.1em;
@@ -178,21 +177,21 @@ main {
   text-shadow: 0px 0px 3vmin rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 5%;
-  left: 25%;
+  left: 35%;
   transform: translateZ(5vmin);
   transform-style: preserve-3d;
   margin: 0;
 }
 #footer-poster__logo {
   font-family: "Agency FB Black";
-  width: 15vmin;
+  width: 7vmin;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #00100b;
   text-shadow: 0px 0px 3vmin rgba(0, 0, 0, 0.7);
   position: absolute;
-  top: 1%;
-  right: 25%;
+  top: 3%;
+  right: 37%;
   transform: translateZ(5vmin);
   transform-style: preserve-3d;
   margin: 0;
@@ -206,7 +205,7 @@ main {
   letter-spacing: 0.4em;
   width: 100%;
   position: absolute;
-  top: 26%;
+  top: 14%;
   left: 0%;
   transform: translateZ(5vmin);
   transform-style: preserve-3d;
@@ -226,7 +225,7 @@ main {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   position: absolute;
-  top: 48%;
+  top: 38%;
   left: 0%;
   width: 100%;
   margin: 0;
@@ -266,4 +265,9 @@ nav a {
   text-transform: uppercase;
   text-decoration-style: dashed;
 }
+/* @media (width >= 600px) and (width <= 1024px) {
+  #container-footer {
+    display: none;
+  }
+} */
 </style>

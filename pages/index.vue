@@ -13,7 +13,6 @@ onMounted(() => {
 
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: "#box",
       start: "top top",
       end: "+=8000",
       scrub: 1,
@@ -526,7 +525,10 @@ onMounted(() => {
 
 <template>
   <main>
-    <div class="h-[1150dvh] lg:h-[1150dvh] xl:h-[1050dvh] 2xl:h-[1020]">
+    <div
+      id="container-main"
+      class="h-[1150dvh] lg:h-[1150dvh] xl:h-[1050dvh] 2xl:h-[1000]"
+    >
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
@@ -1177,5 +1179,10 @@ onMounted(() => {
 }
 .perfil:hover {
   border: 8px solid #1e40af !important;
+}
+@media (width >= 600px) and (width <= 1024px) {
+  #container-main {
+    height: 1050dvh;
+  }
 }
 </style>
