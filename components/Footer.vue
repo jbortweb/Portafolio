@@ -147,6 +147,11 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+@media (max-width: 692px) {
+  #footer-poster__header__title {
+    top: -50px;
+  }
+}
 #footer-poster__header__title::before {
   content: attr(data-title);
   position: absolute;
