@@ -13,9 +13,9 @@ onMounted(() => {
 
   let endMain = "";
   if (window.innerWidth >= 600 && window.innerWidth <= 1400) {
-    endMain = "+=8000";
-  } else {
     endMain = "+=12000";
+  } else {
+    endMain = "+=8000";
   }
 
   const tl = gsap.timeline({
