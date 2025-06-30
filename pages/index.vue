@@ -1072,7 +1072,7 @@ onMounted(() => {
 
       <section
         id="section9"
-        class="fixed inset-0 h-[99vh] bg-white opacity-0 flex items-center justify-center"
+        class="mb-0 sm:mb-28 xl:mb-0 fixed inset-0 h-[99vh] bg-white opacity-0 flex items-center justify-center"
       >
         <article class="flex w-full h-auto items-center justify-center">
           <div class="flex-1 flex flex-col justify-center items-center">
