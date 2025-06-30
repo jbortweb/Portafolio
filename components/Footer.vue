@@ -265,9 +265,9 @@ nav a {
   text-transform: uppercase;
   text-decoration-style: dashed;
 }
-/* @media (width >= 600px) and (width <= 1024px) {
+@media (width >= 500px) and (width <= 900px) {
   #container-footer {
     display: none;
   }
-} */
+}
 </style>
