@@ -21,7 +21,7 @@ onMounted(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
       start: "top top",
-      end: "+=8000",
+      end: endMain,
       scrub: 1,
       pin: true,
     },
