@@ -1178,7 +1178,7 @@ onMounted(() => {
   border: 8px solid #1e40af !important;
 }
 
-@media (width >= 600px) and (width <= 1024px) {
+@media (width >= 600px) and (width <= 1400px) {
   #section9 {
     display: none;
   }
