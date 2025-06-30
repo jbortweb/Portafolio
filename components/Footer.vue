@@ -205,7 +205,7 @@ main {
   letter-spacing: 0.4em;
   width: 100%;
   position: absolute;
-  top: 14%;
+  top: 13%;
   left: 0%;
   transform: translateZ(5vmin);
   transform-style: preserve-3d;
