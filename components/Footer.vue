@@ -147,7 +147,7 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-@media (max-width: 692px) {
+@media (max-width: 600px) {
   #footer-poster__header__title {
     top: -50px;
   }

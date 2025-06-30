@@ -11,18 +11,10 @@ onMounted(() => {
   const contacto = new SplitText("#contacto", { type: "words" });
   const proyectos = new SplitText("#texto-proyectos", { type: "words" });
 
-  let endMain = "";
-
-  if (window.innerWidth > 480 && window.innerWidth < 1280) {
-    endMain = "+=12000";
-  } else {
-    endMain = "+=8000";
-  }
-
   const tl = gsap.timeline({
     scrollTrigger: {
       start: "top top",
-      end: endMain,
+      end: "+=8000",
       scrub: 1,
       pin: true,
     },
@@ -533,7 +525,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <div class="h-[1150dvh] sm:h-[1500dvh] xl:h-[1050dvh]">
+    <div class="h-[1175dvh] sm:h-[1300dvh] xl:h-[1050dvh]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
@@ -1184,5 +1176,11 @@ onMounted(() => {
 }
 .perfil:hover {
   border: 8px solid #1e40af !important;
+}
+
+@media (width >= 600px) and (width <= 986px) {
+  #section9 {
+    display: none;
+  }
 }
 </style>
