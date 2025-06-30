@@ -11,6 +11,13 @@ onMounted(() => {
   const contacto = new SplitText("#contacto", { type: "words" });
   const proyectos = new SplitText("#texto-proyectos", { type: "words" });
 
+  let endMain = "";
+  if (window.innerWidth >= 600 && window.innerWidth <= 1400) {
+    endMain = "+=8000";
+  } else {
+    endMain = "+=12000";
+  }
+
   const tl = gsap.timeline({
     scrollTrigger: {
       start: "top top",
@@ -1178,9 +1185,9 @@ onMounted(() => {
   border: 8px solid #1e40af !important;
 }
 
-@media (width >= 600px) and (width <= 1400px) {
+/* @media (width >= 600px) and (width <= 1400px) {
   #section9 {
     display: none;
   }
-}
+} */
 </style>
