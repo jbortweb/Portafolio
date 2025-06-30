@@ -14,7 +14,7 @@ onMounted(() => {
   let endMain = "";
 
   if (window.innerWidth > 480 && window.innerWidth < 1280) {
-    endMain = "+=10000";
+    endMain = "+=12000";
   } else {
     endMain = "+=8000";
   }
