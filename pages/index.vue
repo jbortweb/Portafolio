@@ -525,7 +525,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <div class="h-[1175dvh] sm:h-[1300dvh] xl:h-[1030 dvh]">
+    <div class="h-[1175dvh] sm:h-[1300dvh] xl:h-[1033dvh]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
@@ -1178,9 +1178,9 @@ onMounted(() => {
   border: 8px solid #1e40af !important;
 }
 
-@media (width >= 600px) and (width <= 1400px) {
+/* @media (width >= 600px) and (width <= 1400px) {
   #section9 {
     display: none;
   }
-}
+} */
 </style>
