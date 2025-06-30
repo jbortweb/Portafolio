@@ -525,7 +525,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <div class="h-[1150dvh] lg:h-[1150dvh] xl:h-[1050dvh] 2xl:h-[1000]">
+    <div class="h-[1150dvh] sm:h-[1250dvh] 2xl:h-[1000]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
