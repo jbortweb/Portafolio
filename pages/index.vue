@@ -238,7 +238,7 @@ onMounted(() => {
       {
         opacity: 1,
         x: 0,
-        duration: 0.7,
+        duration: 1,
         ease: "none",
       }
     )
@@ -248,7 +248,7 @@ onMounted(() => {
       {
         opacity: 1,
         y: 0,
-        duration: 0.7,
+        duration: 1,
         ease: "none",
       }
     )
@@ -258,7 +258,7 @@ onMounted(() => {
       {
         opacity: 1,
         x: 0,
-        duration: 0.7,
+        duration: 1,
         ease: "none",
       }
     )
@@ -268,7 +268,7 @@ onMounted(() => {
       {
         opacity: 1,
         y: 0,
-        duration: 0.7,
+        duration: 1,
         ease: "none",
       }
     )
@@ -278,7 +278,7 @@ onMounted(() => {
         autoAlpha: 0,
         duration: 0.5,
       },
-      "+=1"
+      "+=2"
     )
     .to(
       "#section5",
