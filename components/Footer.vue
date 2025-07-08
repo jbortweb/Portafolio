@@ -30,7 +30,9 @@
       </article>
     </main>
     <nav>
-      <a href="https://jbortweb.netlify.app/" target="_blank">Página oficial</a>
+      <a href="https://vida-laboral.netlify.app/" target="_blank"
+        >Página oficial</a
+      >
     </nav>
   </div>
 </template>

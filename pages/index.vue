@@ -14,7 +14,7 @@ onMounted(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
       start: "top top",
-      end: "+=8000",
+      end: "+=9000",
       scrub: 1,
       pin: true,
     },
@@ -525,7 +525,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <div class="h-[1175dvh] sm:h-[1200dvh] xl:h-[1033dvh]">
+    <div class="h-[1175dvh] sm:h-[1200dvh] xl:h-[1133dvh]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
