@@ -41,9 +41,9 @@ onMounted(() => {
       "#logo-mask",
       {
         maskSize: "clamp(20vh, 25%, 30vh)",
-        duration: 2,
+        duration: 3,
       },
-      0.25
+      0.5
     )
     .to(
       "#picture",
@@ -82,7 +82,7 @@ onMounted(() => {
         y: 0,
         duration: 0.7,
         stagger: 0.18,
-        ease: "power2.out",
+        ease: "none",
       },
       "<"
     )
@@ -91,8 +91,8 @@ onMounted(() => {
       {
         opacity: 1,
         clipPath: "circle(75% at 50% 50%)",
-        duration: 1.2,
-        ease: "power2.out",
+        duration: 2,
+        ease: "none",
       },
       ">"
     )
@@ -134,7 +134,7 @@ onMounted(() => {
         opacity: 1,
         top: 0,
         duration: 1.2,
-        ease: "power2.out",
+        ease: "none",
       },
       ">"
     )
@@ -143,7 +143,7 @@ onMounted(() => {
       {
         right: 0,
         duration: 1.2,
-        ease: "power2.out",
+        ease: "none",
       },
       ">"
     )
@@ -169,7 +169,7 @@ onMounted(() => {
       {
         autoAlpha: 1,
         duration: 1.4,
-        ease: "power2.out",
+        ease: "none",
       },
       "-=1"
     )
@@ -181,7 +181,7 @@ onMounted(() => {
         filter: "blur(10px)",
         stagger: 0.1,
         duration: 1,
-        ease: "power2.out",
+        ease: "none",
       },
       "-=1"
     )
@@ -219,7 +219,7 @@ onMounted(() => {
         filter: "blur(20px)",
         stagger: 0.1,
         duration: 2,
-        ease: "power2.out",
+        ease: "none",
       },
       "-=1"
     )
@@ -239,7 +239,7 @@ onMounted(() => {
         opacity: 1,
         x: 0,
         duration: 0.7,
-        ease: "power2.out",
+        ease: "none",
       }
     )
     .fromTo(
@@ -249,7 +249,7 @@ onMounted(() => {
         opacity: 1,
         y: 0,
         duration: 0.7,
-        ease: "power2.out",
+        ease: "none",
       }
     )
     .fromTo(
@@ -259,7 +259,7 @@ onMounted(() => {
         opacity: 1,
         x: 0,
         duration: 0.7,
-        ease: "power2.out",
+        ease: "none",
       }
     )
     .fromTo(
@@ -269,7 +269,7 @@ onMounted(() => {
         opacity: 1,
         y: 0,
         duration: 0.7,
-        ease: "power2.out",
+        ease: "none",
       }
     )
     .to(
@@ -328,7 +328,7 @@ onMounted(() => {
         filter: "blur(10px)",
         stagger: 0.1,
         duration: 1.5,
-        ease: "power2.out",
+        ease: "none",
       },
       "-=1"
     )
