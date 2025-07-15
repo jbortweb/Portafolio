@@ -11,6 +11,21 @@ onMounted(() => {
   const contacto = new SplitText("#contacto", { type: "words" });
   const proyectos = new SplitText("#texto-proyectos", { type: "words" });
 
+  // Helper para controlar pointer-events solo en secciones con enlaces
+  const seccionesConEnlaces = [
+    "section4",
+    "section6",
+    "section7",
+    "section8",
+    "section9",
+  ];
+  function activarPointerEvents(id) {
+    seccionesConEnlaces.forEach((sec) => {
+      const el = document.getElementById(sec);
+      if (el) el.style.pointerEvents = sec === id ? "auto" : "none";
+    });
+  }
+
   const tl = gsap.timeline({
     scrollTrigger: {
       start: "top top",
@@ -208,6 +223,7 @@ onMounted(() => {
           const s4 = document.getElementById("section4");
           if (s4) s4.style.pointerEvents = "auto";
         }, */,
+        onStart: () => activarPointerEvents("section4"),
       },
       "+=0.1"
     )
@@ -277,6 +293,7 @@ onMounted(() => {
       {
         autoAlpha: 0,
         duration: 0.5,
+        onStart: () => activarPointerEvents(null),
       },
       "+=2"
     )
@@ -345,6 +362,7 @@ onMounted(() => {
       {
         autoAlpha: 1,
         duration: 1,
+        onStart: () => activarPointerEvents("section6"),
       },
       "+=1"
     )
@@ -382,6 +400,7 @@ onMounted(() => {
       {
         autoAlpha: 0,
         duration: 2,
+        onStart: () => activarPointerEvents(null),
       },
       "+=2"
     )
@@ -390,6 +409,7 @@ onMounted(() => {
       {
         autoAlpha: 1,
         duration: 2,
+        onStart: () => activarPointerEvents("section7"),
       },
       ">"
     )
@@ -427,6 +447,7 @@ onMounted(() => {
       {
         autoAlpha: 0,
         duration: 2,
+        onStart: () => activarPointerEvents(null),
       },
       "+=2"
     )
@@ -435,6 +456,7 @@ onMounted(() => {
       {
         autoAlpha: 1,
         duration: 2,
+        onStart: () => activarPointerEvents("section8"),
       },
       ">"
     )
@@ -472,6 +494,7 @@ onMounted(() => {
       {
         autoAlpha: 0,
         duration: 2,
+        onStart: () => activarPointerEvents(null),
       },
       "+=2"
     )
@@ -480,6 +503,7 @@ onMounted(() => {
       {
         autoAlpha: 1,
         duration: 2,
+        onStart: () => activarPointerEvents("section9"),
       },
       ">"
     )
@@ -517,6 +541,7 @@ onMounted(() => {
       {
         autoAlpha: 0,
         duration: 2,
+        onStart: () => activarPointerEvents(null),
       },
       "+=2"
     );
@@ -700,7 +725,7 @@ onMounted(() => {
             href="https://jbortweb.netlify.app/proyectos"
             target="_blank"
             rel="noopener"
-            class="flex w-full items-center gap-4 justify-start"
+            class="enlace-contacto flex w-full items-center gap-4 justify-start"
             id="web"
           >
             <img src="/img/contacto/web.svg" alt="Web" class="w-12 h-12" />
@@ -713,7 +738,7 @@ onMounted(() => {
             href="https://www.linkedin.com/in/jordi-bort/"
             target="_blank"
             rel="noopener"
-            class="flex w-full items-center gap-4 justify-start"
+            class="enlace-contacto flex w-full items-center gap-4 justify-start"
             id="linkedin"
           >
             <img
@@ -730,7 +755,7 @@ onMounted(() => {
             href="https://github.com/jbortweb"
             target="_blank"
             rel="noopener"
-            class="flex w-full items-center gap-4 justify-start"
+            class="enlace-contacto flex w-full items-center gap-4 justify-start"
             id="github"
           >
             <img
@@ -747,7 +772,9 @@ onMounted(() => {
             id="email"
           >
             <img src="/img/contacto/email.svg" alt="Email" class="w-12 h-12" />
-            <span class="text-2xl text-white hover:text-[#e6006b]">Email</span>
+            <span class="text-2xl text-white hover:text-[#e6006b]"
+              >jbortweb@gmail.com</span
+            >
           </a>
         </div>
       </section>
@@ -1165,6 +1192,18 @@ onMounted(() => {
 .icono-lenguaje {
   opacity: 1;
   transition: opacity 0.7s, transform 0.7s;
+}
+.enlace-contacto {
+  z-index: 4000 !important;
+  pointer-events: auto;
+}
+
+#section4,
+#section6,
+#section7,
+#section8,
+#section9 {
+  pointer-events: none;
 }
 #fotomia {
   transition: opacity 0.7s, clip-path 1.2s;
