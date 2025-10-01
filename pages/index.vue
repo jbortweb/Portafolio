@@ -599,7 +599,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <div class="h-[2500dvh] sm:h-[2600dvh] xl:h-[2400dvh]">
+    <div class="h-[3000dvh] sm:h-[2600dvh] xl:h-[2400dvh]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
@@ -626,7 +626,7 @@ onMounted(() => {
               class="w-24 h-24 sm:w-36 sm:h-36 drop-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000]"
             />
             <span
-              class="uppercase absolute tracking-[8px] whitespace-nowrap text-center top-10 sm:top-14 left-1/2 -translate-x-1/2 text-xs sm:text-2xl font-custom font-semibold"
+              class="uppercase absolute tracking-[4px] whitespace-nowrap text-center top-10 sm:top-14 left-1/2 -translate-x-1/2 text-[10px] sm:text-2xl font-custom font-semibold"
               >FullStack Developer</span
             >
           </div>
@@ -647,7 +647,7 @@ onMounted(() => {
           />
           <h2
             id="oficio"
-            class="text-2xl sm:text-4xl font-custom font-semibold text-white text-center"
+            class="text-xl sm:text-4xl font-custom font-semibold text-white text-center"
           >
             FullStack Developer
           </h2>
@@ -761,7 +761,7 @@ onMounted(() => {
         class="fixed inset-0 h-[99vh] bg-[rgb(17,17,17)] opacity-0"
       >
         <h3
-          class="text-4xl sm:text-6xl font-custom font-semibold text-white absolute top-1/6 left-1/2 -translate-x-1/2 -translate-y-1/6"
+          class="text-3xl sm:text-6xl font-custom font-semibold text-white absolute top-1/6 left-1/2 -translate-x-1/2 -translate-y-1/6"
           id="contacto"
         >
           Contacto
@@ -778,7 +778,7 @@ onMounted(() => {
             id="web"
           >
             <img src="/img/contacto/web.svg" alt="Web" class="w-12 h-12" />
-            <span class="text-2xl text-white hover:text-[#e6006b]"
+            <span class="text-lg sm:text-2xl text-white hover:text-[#e6006b]"
               >Mis proyectos</span
             >
           </a>
@@ -795,7 +795,7 @@ onMounted(() => {
               alt="LinkedIn"
               class="w-12 h-12"
             />
-            <span class="text-2xl text-white hover:text-[#e6006b]"
+            <span class="text-lg sm:text-2xl text-white hover:text-[#e6006b]"
               >Linkedin</span
             >
           </a>
@@ -812,7 +812,9 @@ onMounted(() => {
               alt="GitHub"
               class="w-12 h-12"
             />
-            <span class="text-2xl text-white hover:text-[#e6006b]">GitHub</span>
+            <span class="text-lg sm:text-2xl text-white hover:text-[#e6006b]"
+              >GitHub</span
+            >
           </a>
 
           <a
@@ -821,7 +823,7 @@ onMounted(() => {
             id="email"
           >
             <img src="/img/contacto/email.svg" alt="Email" class="w-12 h-12" />
-            <span class="text-2xl text-white hover:text-[#e6006b]"
+            <span class="text-lg sm:text-2xl text-white hover:text-[#e6006b]"
               >jbortweb@gmail.com</span
             >
           </a>
@@ -843,14 +845,14 @@ onMounted(() => {
           id="container-proyectos"
         >
           <h3
-            class="text-2xl w-full sm:text-4xl font-custom font-semibold text-white absolute top-10 left-1/2 -translate-x-1/2"
+            class="text-xl w-full sm:text-4xl font-custom font-semibold text-white absolute top-10 left-1/2 -translate-x-1/2"
             id="titulo-proyectos"
           >
             Algunos de mis proyectos
           </h3>
           <p
             id="texto-proyectos"
-            class="w-[80%] relative top-30 left-1/2 -translate-x-1/2 font-custom text-lg sm:text-2xl break-words whitespace-pre-line text-white text-start m-auto"
+            class="w-[90%] relative top-30 left-1/2 -translate-x-1/2 font-custom text-sm sm:text-2xl break-words whitespace-pre-line text-white text-start m-auto leading-relaxed"
           >
             Como desarrollador full stack, he trabajado en diversos proyectos
             web centrados en la creación de interfaces modernas, funcionales y
@@ -875,7 +877,7 @@ onMounted(() => {
           <div class="flex-1 flex flex-col justify-center items-center">
             <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
               <p
-                class="texto-maduixa text-xl md:text-2xl font-custom text-rosa"
+                class="texto-maduixa text-sm md:text-2xl font-custom text-rosa"
               >
                 Proyecto:
                 <strong class="strong-maduixa text-white text-xl md:text-4xl"
@@ -883,7 +885,7 @@ onMounted(() => {
                 >
               </p>
               <p
-                class="texto-maduixa text-xl md:text-2xl text-rosa font-custom"
+                class="texto-maduixa text-sm md:text-2xl text-rosa font-custom"
               >
                 Tecnologías front-end:
                 <strong class="strong-maduixa text-white text-sm md:text-lg"
@@ -891,7 +893,7 @@ onMounted(() => {
                 >
               </p>
               <p
-                class="texto-maduixa font-custom text-xl md:text-2xl text-rosa"
+                class="texto-maduixa font-custom text-sm md:text-2xl text-rosa"
               >
                 Tecnologías back-end:
                 <strong class="strong-maduixa text-white text-sm md:text-lg"
@@ -900,7 +902,7 @@ onMounted(() => {
               </p>
               <br />
               <p
-                class="texto-maduixa block mt-2 mb-1 text-start w-full text-xl md:text-2xl text-rosa font-custom"
+                class="texto-maduixa block mt-2 mb-1 text-start w-full text-sm md:text-2xl text-rosa font-custom"
               >
                 Características principales:
               </p>
@@ -992,19 +994,19 @@ onMounted(() => {
           </div>
           <div class="flex-1 flex flex-col justify-center items-center">
             <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
-              <p class="texto-zen text-2xl md:text-4xl font-custom text-rosa">
+              <p class="texto-zen text-lg md:text-4xl font-custom text-rosa">
                 Proyecto:
                 <strong class="strong-zen text-black text-lg md:text-2xl"
                   >Espacio Zen</strong
                 >
               </p>
-              <p class="texto-zen text-xl md:text-2xl text-rosa font-custom">
+              <p class="texto-zen text-sm md:text-2xl text-rosa font-custom">
                 Tecnologías front-end:
                 <strong class="strong-zen text-black text-sm md:text-lg"
                   >Nuxt.js + Vuetify</strong
                 >
               </p>
-              <p class="texto-zen font-custom text-xl md:text-2xl text-rosa">
+              <p class="texto-zen font-custom text-sm md:text-2xl text-rosa">
                 Tecnologías back-end:
                 <strong class="strong-zen text-black text-sm md:text-lg"
                   >PHP</strong
@@ -1012,7 +1014,7 @@ onMounted(() => {
               </p>
               <br />
               <p
-                class="texto-zen block mt-2 mb-1 text-start w-full text-xl md:text-2xl text-rosa font-custom"
+                class="texto-zen block mt-2 mb-1 text-start w-full text-sm md:text-2xl text-rosa font-custom"
               >
                 Características principales:
               </p>
@@ -1050,19 +1052,19 @@ onMounted(() => {
         <article class="flex w-full h-auto items-center justify-center">
           <div class="flex-1 flex flex-col justify-center items-center">
             <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
-              <p class="texto-cafe text-xl md:text-4xl font-custom text-rosa">
+              <p class="texto-cafe text-lg md:text-4xl font-custom text-rosa">
                 Proyecto:
                 <strong class="strong-cafe text-white text-xl md:text-2xl"
                   >Café JBortWeb</strong
                 >
               </p>
-              <p class="texto-cafe text-xl md:text-2xl text-rosa font-custom">
+              <p class="texto-cafe text-sm md:text-2xl text-rosa font-custom">
                 Tecnologías front-end:
                 <strong class="strong-cafe text-white text-sm md:text-lg"
                   >React + Tailwind</strong
                 >
               </p>
-              <p class="texto-cafe font-custom text-xl md:text-2xl text-rosa">
+              <p class="texto-cafe font-custom text-sm md:text-2xl text-rosa">
                 Tecnologías back-end:
                 <strong class="strong-cafe text-white text-sm md:text-lg"
                   >Laravel</strong
@@ -1070,7 +1072,7 @@ onMounted(() => {
               </p>
               <br />
               <p
-                class="texto-cafe block mt-2 mb-1 text-start w-full text-xl md:text-2xl text-rosa font-custom"
+                class="texto-cafe block mt-2 mb-1 text-start w-full text-sm md:text-2xl text-rosa font-custom"
               >
                 Características principales:
               </p>
