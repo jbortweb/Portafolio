@@ -599,7 +599,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <div class="h-[3000dvh] sm:h-[2600dvh] xl:h-[2400dvh]">
+    <div class="h-[3500dvh] sm:h-[2600dvh] xl:h-[2400dvh]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
@@ -626,7 +626,7 @@ onMounted(() => {
               class="w-24 h-24 sm:w-36 sm:h-36 drop-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000]"
             />
             <span
-              class="uppercase absolute tracking-[4px] whitespace-nowrap text-center top-10 sm:top-14 left-1/2 -translate-x-1/2 text-[10px] sm:text-2xl font-custom font-semibold"
+              class="uppercase absolute tracking-[4px] whitespace-nowrap text-center top-10 sm:top-14 left-1/2 -translate-x-1/2 text-[8px] sm:text-2xl font-custom font-semibold"
               >FullStack Developer</span
             >
           </div>
@@ -647,7 +647,7 @@ onMounted(() => {
           />
           <h2
             id="oficio"
-            class="text-xl sm:text-4xl font-custom font-semibold text-white text-center"
+            class="text-lg sm:text-4xl font-custom font-semibold text-white text-center"
           >
             FullStack Developer
           </h2>
