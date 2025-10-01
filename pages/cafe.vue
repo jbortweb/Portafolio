@@ -16,22 +16,7 @@ onMounted(() => {
     rotation: 360,
     duration: 2,
     ease: "elastic.out(1, 0.3)",
-  });
-
-  // Título con split text
-  const titleSplit = new SplitText("#cafe-title", { type: "chars" });
-  tl.from(
-    titleSplit.chars,
-    {
-      y: 100,
-      opacity: 0,
-      rotation: 15,
-      stagger: 0.1,
-      duration: 1,
-      ease: "back.out(1.7)",
-    },
-    "-=1.5"
-  )
+  })
 
     // Subtítulo
     .from(
@@ -207,9 +192,13 @@ onMounted(() => {
             class="tech-badge flex flex-col items-center p-8 bg-gray-800/50 rounded-2xl backdrop-blur border border-gray-700/50"
           >
             <div
-              class="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mb-6"
+              class="w-20 h-20 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mb-6"
             >
-              <span class="text-3xl font-bold">R</span>
+              <img
+                src="/img/icons/react.svg"
+                alt="React.js"
+                class="w-12 h-12"
+              />
             </div>
             <h3 class="text-xl font-semibold text-cyan-400 mb-2">React.js</h3>
             <p class="text-gray-400 text-sm text-center">Frontend dinámico</p>
@@ -219,9 +208,13 @@ onMounted(() => {
             class="tech-badge flex flex-col items-center p-8 bg-gray-800/50 rounded-2xl backdrop-blur border border-gray-700/50"
           >
             <div
-              class="w-20 h-20 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mb-6"
+              class="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mb-6"
             >
-              <span class="text-3xl font-bold">L</span>
+              <img
+                src="/img/icons/laravel-2.svg"
+                alt="Laravel"
+                class="w-12 h-12"
+              />
             </div>
             <h3 class="text-xl font-semibold text-red-400 mb-2">Laravel</h3>
             <p class="text-gray-400 text-sm text-center">Backend robusto</p>
@@ -233,7 +226,11 @@ onMounted(() => {
             <div
               class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mb-6"
             >
-              <span class="text-3xl font-bold">T</span>
+              <img
+                src="/img/icons/tailwind.svg"
+                alt="Tailwind CSS"
+                class="w-12 h-12"
+              />
             </div>
             <h3 class="text-xl font-semibold text-blue-400 mb-2">Tailwind</h3>
             <p class="text-gray-400 text-sm text-center">Diseño moderno</p>
@@ -245,7 +242,7 @@ onMounted(() => {
             <div
               class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mb-6"
             >
-              <span class="text-3xl font-bold">M</span>
+              <span class="text-3xl font-bold">🗄️</span>
             </div>
             <h3 class="text-xl font-semibold text-green-400 mb-2">MySQL</h3>
             <p class="text-gray-400 text-sm text-center">Base de datos</p>
