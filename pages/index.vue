@@ -12,13 +12,7 @@ onMounted(() => {
   const proyectos = new SplitText("#texto-proyectos", { type: "words" });
 
   // Helper para controlar pointer-events solo en secciones con enlaces
-  const seccionesConEnlaces = [
-    "section4",
-    "section6",
-    "section7",
-    "section8",
-    "section9",
-  ];
+  const seccionesConEnlaces = ["section4", "section6", "section7", "section9"];
   function activarPointerEvents(id) {
     seccionesConEnlaces.forEach((sec) => {
       const el = document.getElementById(sec);
@@ -29,19 +23,20 @@ onMounted(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
       start: "top top",
-      end: "+=9000",
-      scrub: 1,
+      end: "+=15000",
+      scrub: 2,
       pin: true,
     },
   });
   tl.to("#picture", {
-    duration: 1,
+    duration: 2,
     scale: 1,
   })
     .to(
       "#logo",
       {
         autoAlpha: 0,
+        duration: 1.5,
       },
       "<"
     )
@@ -49,6 +44,7 @@ onMounted(() => {
       "#footer",
       {
         autoAlpha: 0,
+        duration: 1.5,
       },
       "<"
     )
@@ -56,30 +52,30 @@ onMounted(() => {
       "#logo-mask",
       {
         maskSize: "clamp(20vh, 25%, 30vh)",
-        duration: 3,
+        duration: 4,
       },
-      0.5
+      1
     )
     .to(
       "#picture",
       {
         opacity: 0.1,
-        duration: 2,
+        duration: 3,
       },
-      2.5
+      3.5
     )
     .to("#article", {
       opacity: 1,
-      duration: 0.5,
+      duration: 1,
       scale: 1.5,
     })
     .to("#oficio", {
       color: "#1E40AF",
-      duration: 0.2,
+      duration: 0.5,
     })
     .to("#oficio", {
       color: "#E6006B",
-      duration: 0.4,
+      duration: 0.8,
     })
     .to(
       "#logo-mask",
@@ -88,15 +84,15 @@ onMounted(() => {
       },
       "-=0.25"
     )
-    .to("#lenguajes", { opacity: 1, duration: 0.1 }, "<")
+    .to("#lenguajes", { opacity: 1, duration: 0.5 }, "<")
     .fromTo(
       "#lenguajes .icono-lenguaje",
       { autoAlpha: 0, y: -120 },
       {
         autoAlpha: 1,
         y: 0,
-        duration: 0.7,
-        stagger: 0.18,
+        duration: 1.2,
+        stagger: 0.25,
         ease: "none",
       },
       "<"
@@ -106,7 +102,7 @@ onMounted(() => {
       {
         opacity: 1,
         clipPath: "circle(75% at 50% 50%)",
-        duration: 2,
+        duration: 3,
         ease: "none",
       },
       ">"
@@ -115,7 +111,7 @@ onMounted(() => {
       "#section2",
       {
         autoAlpha: 0,
-        duration: 0.7,
+        duration: 1.5,
         onStart: () => {
           const s2 = document.getElementById("section2");
           if (s2) s2.classList.remove("opacity-0");
@@ -125,13 +121,13 @@ onMounted(() => {
           if (s2) s2.style.pointerEvents = "none";
         },
       },
-      "+=1"
+      "+=2"
     )
     .to(
       "#section3",
       {
         opacity: 1,
-        duration: 1.2,
+        duration: 2,
         onStart: () => {
           const s3 = document.getElementById("section3");
           if (s3) s3.classList.remove("opacity-0");
@@ -141,7 +137,7 @@ onMounted(() => {
           if (s3) s3.style.pointerEvents = "auto";
         },
       },
-      "+=0.01"
+      "+=0.5"
     )
     .to(
       ".perfil",
@@ -452,53 +448,6 @@ onMounted(() => {
       "+=2"
     )
     .to(
-      "#section8",
-      {
-        autoAlpha: 1,
-        duration: 2,
-        onStart: () => activarPointerEvents("section8"),
-      },
-      ">"
-    )
-    .fromTo(
-      "#tele-planterra",
-      {
-        opacity: 0,
-        x: 100,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 0.5,
-      },
-      ">"
-    )
-    .fromTo(
-      ".strong-planterra",
-      {
-        opacity: 0,
-        y: 50,
-        stagger: 0.5,
-      },
-      {
-        opacity: 1,
-        color: "#fff",
-        y: 0,
-        duration: 0.7,
-        stagger: 0.5,
-      },
-      ">"
-    )
-    .to(
-      "#section8",
-      {
-        autoAlpha: 0,
-        duration: 2,
-        onStart: () => activarPointerEvents(null),
-      },
-      "+=2"
-    )
-    .to(
       "#section9",
       {
         autoAlpha: 1,
@@ -550,7 +499,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <div class="h-[1175dvh] sm:h-[1200dvh] xl:h-[1133dvh]">
+    <div class="h-[2000dvh] sm:h-[2100dvh] xl:h-[1900dvh]">
       <div id="logo-mask" class="fixed top-0 w-full h-screen">
         <section id="seccion-1" class="h-screen">
           <picture
@@ -993,101 +942,6 @@ onMounted(() => {
           </div>
         </article>
       </section>
-      <section
-        id="section8"
-        class="fixed inset-0 h-[99vh] bg-[rgb(17,17,17)] opacity-0 flex items-center justify-center z-20"
-      >
-        <article
-          class="flex w-full h-auto items-center justify-center relative z-20"
-        >
-          <div
-            id="tele-planterra"
-            class="flex-1 flex flex-col justify-center items-center z-30"
-          >
-            <div
-              class="flex items-center justify-center w-[80%] sm:w-[50%] h-30 md:h-[420px] relative z-30"
-            >
-              <a
-                href="/planterra"
-                style="view-transition-name: planterra-img"
-                class="block transition-link z-30"
-              >
-                <img
-                  src="/img/proyectos/teleplanterra.webp"
-                  alt="Imagen web planterra"
-                  class="w-full h-auto rounded-lg object-cover relative -top-10 transition-img cursor-pointer z-30"
-                  style="view-transition-name: planterra-img"
-                />
-              </a>
-            </div>
-            <a
-              href="https://planterra.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-2xl font-bold mt-8 text-rosa text-custom"
-              >Planterra
-            </a>
-          </div>
-          <div class="flex-1 flex flex-col justify-end items-center">
-            <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
-              <p
-                class="texto-planterra text-2xl md:text-4xl font-custom text-rosa"
-              >
-                Proyecto:
-                <strong class="strong-planterra text-black text-xl md:text-2xl"
-                  >Planterra</strong
-                >
-              </p>
-              <p
-                class="texto-planterra text-xl md:text-2xl text-rosa font-custom"
-              >
-                Tecnologías front-end:
-                <strong class="strong-planterra text-black text-sm md:text-lg"
-                  >Nuxt.js + Tailwind
-                </strong>
-              </p>
-              <p
-                class="texto-planterra font-custom text-xl md:text-2xl text-rosa"
-              >
-                Tecnologías back-end:
-                <strong class="strong-planterra text-black text-sm md:text-lg"
-                  >Firebase</strong
-                >
-              </p>
-              <br />
-              <p
-                class="texto-planterra block mt-2 mb-1 text-start w-full text-xl md:text-2xl text-rosa font-custom"
-              >
-                Características principales:
-              </p>
-              <ul class="w-full flex flex-col items-start gap-2 font-custom">
-                <li
-                  class="strong-planterra w-full text-start text-sm md:text-lg text-black list-none"
-                >
-                  - Interfaz de cliente intuitiva y responsiva
-                </li>
-                <li
-                  class="strong-planterra w-full text-start text-sm md:text-lg text-black list-none"
-                >
-                  - Gestión de Productos: Añade, edita y elimina productos.
-                </li>
-                <li
-                  class="strong-planterra w-full text-start text-sm md:text-lg text-black list-none"
-                >
-                  - Gestión de Pedidos: Visualiza y administra todos los pedidos
-                  realizados.
-                </li>
-                <li
-                  class="strong-planterra w-full text-start text-sm md:text-lg text-black list-none"
-                >
-                  - Calendario de Pedidos: Visualiza los pedidos organizados por
-                  día
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-      </section>
 
       <section
         id="section9"
@@ -1201,7 +1055,6 @@ onMounted(() => {
 #section4,
 #section6,
 #section7,
-#section8,
 #section9 {
   pointer-events: none;
 }
