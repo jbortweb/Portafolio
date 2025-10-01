@@ -1,138 +1,495 @@
 <script setup>
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { onMounted } from "vue";
 
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 onMounted(() => {
-  const splitText = new SplitText("#texto-proyecto-cafe", {
-    type: "words",
+  // Animación inicial del hero
+  const tl = gsap.timeline();
+
+  // Logo principal con efecto de máscara
+  tl.from("#cafe-logo", {
+    scale: 0,
+    rotation: 360,
+    duration: 2,
+    ease: "elastic.out(1, 0.3)",
   });
-  gsap.from(splitText.words, {
-    duration: 1,
-    y: 100,
-    stagger: 0.1,
-    autoAlpha: 0,
-    filter: "blur(10px)",
+
+  // Título con split text
+  const titleSplit = new SplitText("#cafe-title", { type: "chars" });
+  tl.from(
+    titleSplit.chars,
+    {
+      y: 100,
+      opacity: 0,
+      rotation: 15,
+      stagger: 0.1,
+      duration: 1,
+      ease: "back.out(1.7)",
+    },
+    "-=1.5"
+  )
+
+    // Subtítulo
+    .from(
+      "#cafe-subtitle",
+      {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      },
+      "-=0.5"
+    )
+
+    // Botón CTA
+    .from(
+      "#cafe-cta",
+      {
+        scale: 0,
+        rotation: 180,
+        duration: 1,
+        ease: "elastic.out(1, 0.3)",
+      },
+      "-=0.3"
+    );
+
+  // Animaciones con scroll
+  gsap.set(".feature-card", { y: 100, opacity: 0 });
+  gsap.set(".tech-badge", { scale: 0, rotation: 180 });
+  gsap.set(".screenshot", { y: 150, opacity: 0, rotation: 5 });
+
+  // Cards de características
+  ScrollTrigger.batch(".feature-card", {
+    onEnter: (elements) => {
+      gsap.to(elements, {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power3.out",
+      });
+    },
+  });
+
+  // Badges de tecnologías
+  ScrollTrigger.batch(".tech-badge", {
+    onEnter: (elements) => {
+      gsap.to(elements, {
+        scale: 1,
+        rotation: 0,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: "elastic.out(1, 0.3)",
+      });
+    },
+  });
+
+  // Screenshots
+  ScrollTrigger.batch(".screenshot", {
+    onEnter: (elements) => {
+      gsap.to(elements, {
+        y: 0,
+        opacity: 1,
+        rotation: 0,
+        stagger: 0.3,
+        duration: 1.2,
+        ease: "power3.out",
+      });
+    },
+  });
+
+  // Parallax en imágenes
+  gsap.utils.toArray(".parallax-img").forEach((img) => {
+    gsap.to(img, {
+      yPercent: -30,
+      ease: "none",
+      scrollTrigger: {
+        trigger: img,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  });
+
+  // Efecto hover en cards
+  gsap.utils.toArray(".hover-card").forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, {
+        y: -10,
+        scale: 1.05,
+        boxShadow: "0 20px 40px rgba(230, 0, 107, 0.3)",
+        duration: 0.3,
+        ease: "power3.out",
+      });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, {
+        y: 0,
+        scale: 1,
+        boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
+        duration: 0.3,
+        ease: "power3.out",
+      });
+    });
   });
 });
 </script>
 
 <template>
-  <div class="py-10 min-h-screen flex items-center justify-center">
-    <div
-      class="w-[95%] md:w-full max-w-screen-xl flex flex-col gap-6 pt-8 md:grid md:grid-cols-6 md:grid-rows-5 md:gap-6 md:pt-0"
+  <main
+    class="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-x-hidden"
+  >
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex flex-col items-center justify-center relative px-6 md:px-12"
     >
-      <!-- Imágenes superiores -->
-      <div class="flex gap-4 md:contents">
+      <!-- Logo café -->
+      <div id="cafe-logo" class="mb-8 relative">
         <div
-          class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:p-6 md:block"
+          class="w-32 h-32 bg-gradient-to-br from-amber-600 to-amber-800 rounded-full flex items-center justify-center shadow-2xl"
         >
-          <a
-            href="https://cafe-jbortweb.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/img/proyectos/editcafe.webp"
-              alt="Imagen de la web de cafereact"
-              class="w-full h-auto object-cover rounded-lg"
-              style="view-transition-name: cafe-img"
-            />
-          </a>
+          <span class="text-6xl">☕</span>
         </div>
         <div
-          class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-4 md:p-6 md:block"
+          class="absolute -inset-4 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full blur-lg opacity-30 animate-pulse"
+        ></div>
+      </div>
+
+      <!-- Título principal -->
+      <h1
+        id="cafe-title"
+        class="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 text-center bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-500 bg-clip-text text-transparent"
+      >
+        CAFÉ JBORTWEB
+      </h1>
+
+      <!-- Subtítulo -->
+      <p
+        id="cafe-subtitle"
+        class="text-xl md:text-2xl text-gray-300 text-center max-w-3xl mb-12 leading-relaxed px-4"
+      >
+        Una experiencia de café digital creada con
+        <span class="text-[#e6006b] font-semibold">React.js</span> y
+        <span class="text-[#e6006b] font-semibold">Laravel</span>
+      </p>
+
+      <!-- CTA Button -->
+      <a
+        id="cafe-cta"
+        href="https://cafe-jbortweb.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-10 py-5 bg-gradient-to-r from-[#e6006b] to-pink-600 rounded-full text-white font-semibold text-lg hover:from-pink-600 hover:to-[#e6006b] transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-pink-500/30"
+      >
+        Explorar el Proyecto ✨
+      </a>
+    </section>
+
+    <!-- Tecnologías Section -->
+    <section
+      class="py-32 mt-20 px-6 md:px-12 flex flex-col items-center justify-center"
+    >
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+          class="text-4xl md:text-5xl font-bold text-center mb-24 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"
         >
-          <a
-            href="https://cafe-jbortweb.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
+          Stack Tecnológico
+        </h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div
+            class="tech-badge flex flex-col items-center p-8 bg-gray-800/50 rounded-2xl backdrop-blur border border-gray-700/50"
           >
-            <img
-              src="/img/proyectos/pedidoscafe.webp"
-              alt="Imagen de la web de cafereact"
-              class="w-full h-auto rounded-lg object-cover"
-              style="view-transition-name: cafe-img"
-            />
-          </a>
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mb-6"
+            >
+              <span class="text-3xl font-bold">R</span>
+            </div>
+            <h3 class="text-xl font-semibold text-cyan-400 mb-2">React.js</h3>
+            <p class="text-gray-400 text-sm text-center">Frontend dinámico</p>
+          </div>
+
+          <div
+            class="tech-badge flex flex-col items-center p-8 bg-gray-800/50 rounded-2xl backdrop-blur border border-gray-700/50"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mb-6"
+            >
+              <span class="text-3xl font-bold">L</span>
+            </div>
+            <h3 class="text-xl font-semibold text-red-400 mb-2">Laravel</h3>
+            <p class="text-gray-400 text-sm text-center">Backend robusto</p>
+          </div>
+
+          <div
+            class="tech-badge flex flex-col items-center p-8 bg-gray-800/50 rounded-2xl backdrop-blur border border-gray-700/50"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mb-6"
+            >
+              <span class="text-3xl font-bold">T</span>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">Tailwind</h3>
+            <p class="text-gray-400 text-sm text-center">Diseño moderno</p>
+          </div>
+
+          <div
+            class="tech-badge flex flex-col items-center p-8 bg-gray-800/50 rounded-2xl backdrop-blur border border-gray-700/50"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mb-6"
+            >
+              <span class="text-3xl font-bold">M</span>
+            </div>
+            <h3 class="text-xl font-semibold text-green-400 mb-2">MySQL</h3>
+            <p class="text-gray-400 text-sm text-center">Base de datos</p>
+          </div>
         </div>
       </div>
-      <!-- Texto central -->
-      <div
-        class="p-4 rounded-xl backdrop-blur flex flex-col items-center justify-center md:col-span-2 md:row-span-5 md:col-start-3 md:row-start-1 md:p-6"
-      >
-        <div
-          id="texto-proyecto-cafe"
-          class="flex flex-col h-full items-center justify-center px-4"
-        >
-          <p class="text-lg text-white font-custom">
-            <span class="text-rosa text-xl">Café Jbortweb</span> es una web
-            desarrollada con React.js y Tailwind en el frontend, y Laravel en el
-            panel de administración. Permite gestionar los pedidos de los
-            clientes, así como crear, editar y eliminar productos de forma ágil
-            y segura desde el panel de control.
-          </p>
-          <p class="text-lg text-white font-custom">
-            La página consta de dos vistas:<br />
-            <span class="text-rosa text-xl">Cliente</span>: puede acceder a
-            todos los productos y sus categorías, realizar compras, visualizar
-            sus pedidos, editarlos y eliminarlos de forma sencilla.<br />
-            <span class="text-rosa text-xl">Administrador</span>: vista
-            autenticada desde la que el administrador puede acceder de forma
-            segura, gestionar pedidos y administrar los productos (crear, editar
-            y eliminar).
-          </p>
+    </section>
 
-          <br />
-          <br />
+    <!-- Características Section -->
+    <section
+      class="py-32 mt-20 px-6 md:px-12 bg-gray-900/50 flex flex-col items-center justify-center"
+    >
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+          class="text-4xl md:text-5xl font-bold text-center mb-24 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"
+        >
+          Características del Proyecto
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-16">
+          <div
+            class="feature-card hover-card p-10 bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-3xl backdrop-blur border border-gray-700/50"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mb-8"
+            >
+              <span class="text-3xl">👤</span>
+            </div>
+            <h3 class="text-3xl font-bold mb-6 text-pink-400">
+              Vista de Cliente
+            </h3>
+            <ul class="space-y-4 text-gray-300 text-lg">
+              <li class="flex items-center space-x-4">
+                <span class="text-green-400 text-xl">✓</span>
+                <span>Catálogo de productos interactivo</span>
+              </li>
+              <li class="flex items-center space-x-4">
+                <span class="text-green-400 text-xl">✓</span>
+                <span>Carrito de compras dinámico</span>
+              </li>
+              <li class="flex items-center space-x-4">
+                <span class="text-green-400 text-xl">✓</span>
+                <span>Gestión de pedidos en tiempo real</span>
+              </li>
+              <li class="flex items-center space-x-4">
+                <span class="text-green-400 text-xl">✓</span>
+                <span>Interfaz responsive y moderna</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="feature-card hover-card p-10 bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-3xl backdrop-blur border border-gray-700/50"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-8"
+            >
+              <span class="text-3xl">⚙️</span>
+            </div>
+            <h3 class="text-3xl font-bold mb-6 text-blue-400">
+              Panel de Administración
+            </h3>
+            <ul class="space-y-4 text-gray-300 text-lg">
+              <li class="flex items-center space-x-4">
+                <span class="text-green-400 text-xl">✓</span>
+                <span>Sistema de autenticación seguro</span>
+              </li>
+              <li class="flex items-center space-x-4">
+                <span class="text-green-400 text-xl">✓</span>
+                <span>CRUD completo de productos</span>
+              </li>
+              <li class="flex items-center space-x-4">
+                <span class="text-green-400 text-xl">✓</span>
+                <span>Gestión avanzada de pedidos</span>
+              </li>
+              <li class="flex items-center space-x-4">
+                <span class="text-green-400 text-xl">✓</span>
+                <span>Dashboard con estadísticas</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section
+      class="py-32 mt-20 px-6 md:px-12 bg-gray-900/50 flex flex-col items-center justify-center"
+    >
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+          class="text-4xl md:text-5xl font-bold text-center mb-24 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"
+        >
+          Capturas del Proyecto
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+          <div class="screenshot hover-card group">
+            <div class="relative overflow-hidden rounded-2xl">
+              <img
+                src="/img/proyectos/cafereact.webp"
+                alt="Vista principal del café"
+                class="parallax-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <h4 class="font-semibold">Vista Principal</h4>
+                <p class="text-sm text-gray-300">Catálogo de productos</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="screenshot hover-card group">
+            <div class="relative overflow-hidden rounded-2xl">
+              <img
+                src="/img/proyectos/editcafe.webp"
+                alt="Panel de administración"
+                class="parallax-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <h4 class="font-semibold">Panel Admin</h4>
+                <p class="text-sm text-gray-300">Gestión de productos</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="screenshot hover-card group">
+            <div class="relative overflow-hidden rounded-2xl">
+              <img
+                src="/img/proyectos/pedidoscafe.webp"
+                alt="Gestión de pedidos"
+                class="parallax-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <h4 class="font-semibold">Pedidos</h4>
+                <p class="text-sm text-gray-300">Gestión completa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section
+      class="py-32 mt-20 mb-20 px-6 md:px-12 bg-gray-900/50 flex flex-col items-center justify-center"
+    >
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+          class="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"
+        >
+          ¿Listo para el Café?
+        </h2>
+        <p
+          class="text-xl md:text-2xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed"
+        >
+          Explora la experiencia completa del proyecto y descubre cómo la
+          tecnología puede transformar un simple café en una experiencia digital
+          extraordinaria.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row gap-8 justify-center items-center mt-8"
+        >
+          <a
+            href="https://cafe-jbortweb.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-16 py-6 bg-gradient-to-r from-[#e6006b] to-pink-600 rounded-full text-white font-semibold text-xl hover:from-pink-600 hover:to-[#e6006b] transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-pink-500/30 hover:scale-105 min-w-[280px] text-center"
+          >
+            Ver Proyecto Live
+          </a>
+
           <NuxtLink
             to="/"
-            class="back-button text-rosa font-custom text-lg pt-40"
+            class="px-16 py-6 border-2 border-gray-600 rounded-full text-gray-300 font-semibold text-xl hover:border-white hover:text-white transition-all duration-300 hover:scale-105 min-w-[280px] text-center"
           >
-            ← Volver atras
+            ← Volver al Portafolio
           </NuxtLink>
         </div>
       </div>
-      <!-- Imágenes inferiores -->
-      <div class="flex gap-4 md:contents">
-        <div
-          class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:col-start-5 md:row-start-1 md:p-6 md:block"
-        >
-          <a
-            href="https://cafe-jbortweb.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/img/proyectos/cafereact.webp"
-              alt="Imagen de la web de cafereact"
-              class="w-full h-auto rounded-lg object-cover"
-              style="view-transition-name: cafe-img"
-            />
-          </a>
-        </div>
-        <div
-          class="flex-1 p-4 teleborde hover:scale-105 transition-transform rounded-xl md:col-span-2 md:row-span-2 md:col-start-5 md:row-start-4 md:p-6 md:block"
-        >
-          <a
-            href="https://cafe-jbortweb.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/img/proyectos/pedidoscliente.webp"
-              alt="Imagen de la web de cafereact"
-              class="w-full h-auto rounded-lg object-cover"
-              style="view-transition-name: cafe-img"
-            />
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
+  </main>
 </template>
 
 <style scoped>
+section:not(:first-child) {
+  margin-top: 2.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+section:last-child {
+  margin-bottom: 5rem;
+}
+
+section h2 {
+  margin-bottom: 3rem !important;
+}
+
+section:last-child h2 {
+  margin-bottom: 2rem !important;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.hover-card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
 </style>
