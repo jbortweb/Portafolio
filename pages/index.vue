@@ -363,10 +363,10 @@ onMounted(() => {
       "+=1"
     )
     .fromTo(
-      "#tele-zen",
+      "#tele-maduixa",
       {
         opacity: 0,
-        x: -100,
+        x: 100,
       },
       {
         opacity: 1,
@@ -376,7 +376,7 @@ onMounted(() => {
       ">"
     )
     .fromTo(
-      ".strong-zen",
+      ".strong-maduixa",
       {
         opacity: 0,
         y: 50,
@@ -384,7 +384,7 @@ onMounted(() => {
       },
       {
         opacity: 1,
-        color: "#fff",
+        color: "#000",
         y: 0,
         duration: 0.7,
         stagger: 0.5,
@@ -410,10 +410,10 @@ onMounted(() => {
       ">"
     )
     .fromTo(
-      "#tele-maduixa",
+      "#tele-zen",
       {
         opacity: 0,
-        x: 100,
+        x: -100,
       },
       {
         opacity: 1,
@@ -423,7 +423,7 @@ onMounted(() => {
       ">"
     )
     .fromTo(
-      ".strong-maduixa",
+      ".strong-zen",
       {
         opacity: 0,
         y: 50,
@@ -431,7 +431,7 @@ onMounted(() => {
       },
       {
         opacity: 1,
-        color: "#000",
+        color: "#fff",
         y: 0,
         duration: 0.7,
         stagger: 0.5,
@@ -779,95 +779,7 @@ onMounted(() => {
       </section>
       <section
         id="section6"
-        class="fixed inset-0 h-[99vh] bg-[rgb(17,17,17)] opacity-0 flex items-center justify-center z-70"
-      >
-        <article
-          class="flex w-full h-auto items-center justify-center relative z-20"
-        >
-          <div
-            id="tele-zen"
-            class="flex-1 flex flex-col justify-center items-center z-30"
-          >
-            <div
-              class="flex items-center justify-center w-[70%] sm:w-[50%] h-30 md:h-[420px] relative z-30"
-            >
-              <a
-                href="/espaciozen"
-                style="view-transition-name: espaciozen-img"
-                class="block transition-link z-30"
-              >
-                <img
-                  src="/img/proyectos/telezen.webp"
-                  alt="espaciozen.webp"
-                  class="w-full h-auto rounded-lg object-cover relative -top-5 transition-img cursor-pointer z-30"
-                  style="view-transition-name: espaciozen-img"
-                />
-              </a>
-            </div>
-            <a
-              href="https://espaciozensjm.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-2xl font-bold mt-8 text-rosa text-custom"
-              >Espacio Zen
-            </a>
-          </div>
-          <div class="flex-1 flex flex-col justify-center items-center">
-            <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
-              <p class="texto-zen text-2xl md:text-4xl font-custom text-rosa">
-                Proyecto:
-                <strong class="strong-zen text-black text-lg md:text-2xl"
-                  >Espacio Zen</strong
-                >
-              </p>
-              <p class="texto-zen text-xl md:text-2xl text-rosa font-custom">
-                Tecnologías front-end:
-                <strong class="strong-zen text-black text-sm md:text-lg"
-                  >Nuxt.js + Vuetify</strong
-                >
-              </p>
-              <p class="texto-zen font-custom text-xl md:text-2xl text-rosa">
-                Tecnologías back-end:
-                <strong class="strong-zen text-black text-sm md:text-lg"
-                  >PHP</strong
-                >
-              </p>
-              <br />
-              <p
-                class="texto-zen block mt-2 mb-1 text-start w-full text-xl md:text-2xl text-rosa font-custom"
-              >
-                Características principales:
-              </p>
-              <ul class="w-full flex flex-col items-start gap-2 font-custom">
-                <li
-                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
-                >
-                  - Interfaz de usuario intuitiva y responsiva
-                </li>
-                <li
-                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
-                >
-                  - Gestión completa de artículos (alta, edición y baja)
-                </li>
-                <li
-                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
-                >
-                  - Integración con API de Instagram
-                </li>
-                <li
-                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
-                >
-                  - Consultas a la API de ChatGPT
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section
-        id="section7"
-        class="fixed inset-0 h-[99vh] bg-white opacity-0 flex items-center justify-center z-60"
+        class="fixed inset-0 h-[99vh] bg-white opacity-0 flex items-center justify-center z-70"
       >
         <article
           class="flex w-full h-auto items-center justify-center relative z-20"
@@ -951,6 +863,94 @@ onMounted(() => {
               class="text-2xl font-bold mt-8 text-rosa text-custom"
               >Maduixa
             </a>
+          </div>
+        </article>
+      </section>
+
+      <section
+        id="section7"
+        class="fixed inset-0 h-[99vh] bg-[rgb(17,17,17)] opacity-0 flex items-center justify-center z-60"
+      >
+        <article
+          class="flex w-full h-auto items-center justify-center relative z-20"
+        >
+          <div
+            id="tele-zen"
+            class="flex-1 flex flex-col justify-center items-center z-30"
+          >
+            <div
+              class="flex items-center justify-center w-[70%] sm:w-[50%] h-30 md:h-[420px] relative z-30"
+            >
+              <a
+                href="/espaciozen"
+                style="view-transition-name: espaciozen-img"
+                class="block transition-link z-30"
+              >
+                <img
+                  src="/img/proyectos/telezen.webp"
+                  alt="espaciozen.webp"
+                  class="w-full h-auto rounded-lg object-cover relative -top-5 transition-img cursor-pointer z-30"
+                  style="view-transition-name: espaciozen-img"
+                />
+              </a>
+            </div>
+            <a
+              href="https://espaciozensjm.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-2xl font-bold mt-8 text-rosa text-custom"
+              >Espacio Zen
+            </a>
+          </div>
+          <div class="flex-1 flex flex-col justify-center items-center">
+            <div class="w-[75%] mx-auto flex flex-col items-start gap-3">
+              <p class="texto-zen text-2xl md:text-4xl font-custom text-rosa">
+                Proyecto:
+                <strong class="strong-zen text-black text-lg md:text-2xl"
+                  >Espacio Zen</strong
+                >
+              </p>
+              <p class="texto-zen text-xl md:text-2xl text-rosa font-custom">
+                Tecnologías front-end:
+                <strong class="strong-zen text-black text-sm md:text-lg"
+                  >Nuxt.js + Vuetify</strong
+                >
+              </p>
+              <p class="texto-zen font-custom text-xl md:text-2xl text-rosa">
+                Tecnologías back-end:
+                <strong class="strong-zen text-black text-sm md:text-lg"
+                  >PHP</strong
+                >
+              </p>
+              <br />
+              <p
+                class="texto-zen block mt-2 mb-1 text-start w-full text-xl md:text-2xl text-rosa font-custom"
+              >
+                Características principales:
+              </p>
+              <ul class="w-full flex flex-col items-start gap-2 font-custom">
+                <li
+                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
+                >
+                  - Interfaz de usuario intuitiva y responsiva
+                </li>
+                <li
+                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
+                >
+                  - Gestión completa de artículos (alta, edición y baja)
+                </li>
+                <li
+                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
+                >
+                  - Integración con API de Instagram
+                </li>
+                <li
+                  class="strong-zen w-full text-start text-sm md:text-lg text-black list-none"
+                >
+                  - Consultas a la API de ChatGPT
+                </li>
+              </ul>
+            </div>
           </div>
         </article>
       </section>
