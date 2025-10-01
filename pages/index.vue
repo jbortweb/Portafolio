@@ -493,6 +493,18 @@ onMounted(() => {
         onStart: () => activarPointerEvents(null),
       },
       "+=2"
+    )
+    .to(
+      "#footer-main",
+      {
+        opacity: 1,
+        duration: 1,
+        onStart: () => {
+          const footer = document.getElementById("footer-main");
+          if (footer) footer.style.pointerEvents = "auto";
+        },
+      },
+      "+=0.5"
     );
 });
 </script>
@@ -945,7 +957,7 @@ onMounted(() => {
 
       <section
         id="section9"
-        class="mb-0 sm:mb-28 xl:mb-0 fixed inset-0 h-[99vh] bg-white opacity-0 flex items-center justify-center"
+        class="fixed inset-0 h-[99vh] bg-white opacity-0 flex items-center justify-center"
       >
         <article class="flex w-full h-auto items-center justify-center">
           <div class="flex-1 flex flex-col justify-center items-center">

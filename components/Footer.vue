@@ -3,7 +3,7 @@
 
 <template>
   <div>
-    <main id="container-footer">
+    <main id="footer-main">
       <article id="footer-poster">
         <header id="footer-poster__header">
           <h1 id="footer-poster__header__title" data-title="JBORTWEB">
@@ -107,12 +107,25 @@ body {
   }
 }
 main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   perspective: 1000px;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+main.footer-visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 #footer-poster {
   aspect-ratio: 9/14;
