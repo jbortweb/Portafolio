@@ -20,12 +20,80 @@ onMounted(() => {
     });
   }
 
+  // Función para activar enlaces individuales basado en la opacidad de la sección
+  function activarEnlacesIndividuales() {
+    // Definir los enlaces dentro de cada sección
+    const enlaces = [
+      {
+        seccion: "section4",
+        selectores: [
+          'a[href*="mailto"]',
+          'a[href*="instagram"]',
+          'a[href*="linkedin"]',
+          'a[href*="github"]',
+        ],
+      },
+      {
+        seccion: "section6",
+        selectores: ['a[href="/maduixa"]', 'a[href*="lenceriamaduixa"]'],
+      },
+      {
+        seccion: "section7",
+        selectores: ['a[href="/espaciozen"]', 'a[href*="espaciozensjm"]'],
+      },
+      {
+        seccion: "section9",
+        selectores: ['a[href="/cafe"]', 'a[href*="cafe-jbortweb"]'],
+      },
+    ];
+
+    enlaces.forEach(({ seccion, selectores }) => {
+      const seccionEl = document.getElementById(seccion);
+      if (seccionEl) {
+        const opacity = parseFloat(window.getComputedStyle(seccionEl).opacity);
+        const autoAlpha = parseFloat(
+          window.getComputedStyle(seccionEl).visibility === "visible"
+            ? opacity
+            : 0
+        );
+
+        selectores.forEach((selector) => {
+          const enlace = seccionEl.querySelector(selector);
+          if (enlace) {
+            // Activar si la sección tiene opacidad alta y es visible
+            enlace.style.pointerEvents =
+              opacity > 0.3 && autoAlpha > 0.3 ? "auto" : "none";
+            enlace.style.cursor =
+              opacity > 0.3 && autoAlpha > 0.3 ? "pointer" : "default";
+          }
+        });
+      }
+    });
+  }
+
   const tl = gsap.timeline({
     scrollTrigger: {
       start: "top top",
       end: "+=18000",
       scrub: 2,
       pin: true,
+      onUpdate: (self) => {
+        // Detectar dirección del scroll y posición
+        const progress = self.progress;
+        const footer = document.getElementById("footer-main");
+
+        if (footer) {
+          // Si estamos cerca del final (progress > 0.985), mostrar footer
+          if (progress > 0.985) {
+            footer.style.opacity = "1";
+            footer.style.pointerEvents = "auto";
+          } else {
+            // Si no estamos al final, ocultar footer para no bloquear enlaces
+            footer.style.opacity = "0";
+            footer.style.pointerEvents = "none";
+          }
+        }
+      },
     },
   });
   tl.to("#picture", {
@@ -493,19 +561,39 @@ onMounted(() => {
         onStart: () => activarPointerEvents(null),
       },
       "+=2"
-    )
-    .to(
-      "#footer-main",
-      {
-        opacity: 1,
-        duration: 1,
-        onStart: () => {
-          const footer = document.getElementById("footer-main");
-          if (footer) footer.style.pointerEvents = "auto";
-        },
-      },
-      "+=0.5"
     );
+
+  // Listener de scroll para mantener pointer-events actualizados en enlaces individuales
+  let scrollTimeout;
+  window.addEventListener("scroll", () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      activarEnlacesIndividuales();
+    }, 50);
+  });
+
+  // Observer para cambios en las animaciones GSAP
+  const observer = new MutationObserver(() => {
+    activarEnlacesIndividuales();
+  });
+
+  // Observar cambios en las secciones
+  seccionesConEnlaces.forEach((secId) => {
+    const el = document.getElementById(secId);
+    if (el) {
+      observer.observe(el, {
+        attributes: true,
+        attributeFilter: ["style"],
+      });
+    }
+  });
+
+  // Verificación inicial y periódica
+  setTimeout(() => {
+    activarEnlacesIndividuales();
+    // Verificación periódica para asegurar consistencia
+    setInterval(activarEnlacesIndividuales, 1000);
+  }, 500);
 });
 </script>
 
