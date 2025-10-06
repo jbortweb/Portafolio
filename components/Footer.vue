@@ -31,7 +31,7 @@
     </main>
     <nav>
       <a href="https://vida-laboral.netlify.app/" target="_blank"
-        >Página oficial</a
+        >Vida Laboral</a
       >
     </nav>
   </div>
