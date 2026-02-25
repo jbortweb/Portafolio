@@ -947,7 +947,7 @@ onMounted(() => {
               </a>
             </div>
             <a
-              href="https://lenceriamaduixa.netlify.app/"
+              href="/maduixa"
               target="_blank"
               rel="noopener noreferrer"
               class="text-2xl font-bold mt-8 text-rosa text-custom"
@@ -985,7 +985,7 @@ onMounted(() => {
               </a>
             </div>
             <a
-              href="https://espaciozensjm.com/"
+              href="/espaciozen"
               target="_blank"
               rel="noopener noreferrer"
               class="text-2xl font-bold mt-8 text-rosa text-custom"
@@ -1055,7 +1055,7 @@ onMounted(() => {
               <p class="texto-cafe text-lg md:text-4xl font-custom text-rosa">
                 Proyecto:
                 <strong class="strong-cafe text-white text-xl md:text-2xl"
-                  >Café JBortWeb</strong
+                  >Aquichef</strong
                 >
               </p>
               <p class="texto-cafe text-sm md:text-2xl text-rosa font-custom">
@@ -1118,11 +1118,11 @@ onMounted(() => {
               </a>
             </div>
             <a
-              href="https://cafe-jbortweb.netlify.app/"
+              href="/cafe"
               target="_blank"
               rel="noopener noreferrer"
               class="text-2xl font-bold mt-8 text-rosa text-custom"
-              >Café JBortWeb
+              >Aquichef
             </a>
           </div>
         </article>
