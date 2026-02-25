@@ -355,10 +355,10 @@ onMounted(() => {
                 class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
               <div
-                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                class="absolute bottom-1 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <h4 class="font-semibold">Vista Principal</h4>
-                <p class="text-sm text-gray-300">Catálogo de productos</p>
+                <h4 class="font-semibold">Vista Principal
+                <span class="text-sm text-gray-300">Catálogo de productos</span></h4>
               </div>
             </div>
           </div>
@@ -374,10 +374,10 @@ onMounted(() => {
                 class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
               <div
-                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                class="absolute bottom-1 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <h4 class="font-semibold">Galería</h4>
-                <p class="text-sm text-gray-300">Carrusel de imágenes</p>
+                <h4 class="font-semibold">Galería
+                <span class="text-sm text-gray-300">Carrusel de imágenes</span></h4>
               </div>
             </div>
           </div>
@@ -393,10 +393,10 @@ onMounted(() => {
                 class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
               <div
-                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                class="absolute bottom-1 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <h4 class="font-semibold">Vista Móvil</h4>
-                <p class="text-sm text-gray-300">Experiencia responsive</p>
+                <h4 class="font-semibold">Vista Móvil
+                <span class="text-sm text-gray-300">Experiencia responsive</span></h4>
               </div>
             </div>
           </div>
@@ -426,7 +426,7 @@ onMounted(() => {
           class="flex flex-col sm:flex-row gap-8 justify-center items-center mt-8"
         >
           <a
-            href="https://lenceriamaduixa.netlify.app/"
+            href="https://lenceriamaduixa.com/"
             target="_blank"
             rel="noopener noreferrer"
             class="px-16 py-6 bg-gradient-to-r from-pink-600 to-rose-600 rounded-full text-white font-semibold text-xl hover:from-rose-600 hover:to-pink-600 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-pink-500/30 hover:scale-105 min-w-[280px] text-center"
@@ -492,5 +492,8 @@ section:last-child h2 {
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient-shift 3s ease infinite;
+}
+.feature-card{
+  padding:30px;
 }
 </style>

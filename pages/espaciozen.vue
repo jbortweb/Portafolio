@@ -488,4 +488,7 @@ section:last-child h2 {
   background-size: 200% 200%;
   animation: gradient-shift 3s ease infinite;
 }
+.feature-card{
+  padding:30px;
+}
 </style>
