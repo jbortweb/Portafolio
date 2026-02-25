@@ -151,7 +151,7 @@ onMounted(() => {
         id="cafe-title"
         class="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 text-center bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-500 bg-clip-text text-transparent"
       >
-        CAFÉ JBORTWEB
+        AQUICHEF
       </h1>
 
       <!-- Subtítulo -->
@@ -159,7 +159,7 @@ onMounted(() => {
         id="cafe-subtitle"
         class="text-xl md:text-2xl text-gray-300 text-center max-w-3xl mb-12 leading-relaxed px-4"
       >
-        Una experiencia de café digital creada con
+        Una experiencia de restaurante digital creada con
         <span class="text-[#e6006b] font-semibold">React.js</span> y
         <span class="text-[#e6006b] font-semibold">Laravel</span>
       </p>
@@ -351,10 +351,10 @@ onMounted(() => {
                 class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
               <div
-                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                class="absolute bottom-1 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <h4 class="font-semibold">Vista Principal</h4>
-                <p class="text-sm text-gray-300">Catálogo de productos</p>
+                <h4 class="font-semibold">Vista Principal
+                <span class="text-sm text-gray-300">Catálogo de productos</span></h4>
               </div>
             </div>
           </div>
@@ -370,10 +370,10 @@ onMounted(() => {
                 class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
               <div
-                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                class="absolute bottom-1 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <h4 class="font-semibold">Panel Admin</h4>
-                <p class="text-sm text-gray-300">Gestión de productos</p>
+                <h4 class="font-semibold">Panel Admin
+                <span class="text-sm text-gray-300">Gestión de productos</span></h4>
               </div>
             </div>
           </div>
@@ -389,10 +389,10 @@ onMounted(() => {
                 class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
               <div
-                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                class="absolute bottom-1 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <h4 class="font-semibold">Pedidos</h4>
-                <p class="text-sm text-gray-300">Gestión completa</p>
+                <h4 class="font-semibold">Pedidos
+                <span class="text-sm text-gray-300">Gestión completa</span></h4>
               </div>
             </div>
           </div>
@@ -422,7 +422,7 @@ onMounted(() => {
           class="flex flex-col sm:flex-row gap-8 justify-center items-center mt-8"
         >
           <a
-            href="https://cafe-jbortweb.netlify.app/"
+            href="https://www.aquichef.com/"
             target="_blank"
             rel="noopener noreferrer"
             class="px-16 py-6 bg-gradient-to-r from-[#e6006b] to-pink-600 rounded-full text-white font-semibold text-xl hover:from-pink-600 hover:to-[#e6006b] transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-pink-500/30 hover:scale-105 min-w-[280px] text-center"

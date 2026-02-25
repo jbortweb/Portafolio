@@ -351,10 +351,10 @@ onMounted(() => {
                 class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
               <div
-                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                class="absolute bottom-1 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <h4 class="font-semibold">Vista Principal</h4>
-                <p class="text-sm text-gray-300">Página de inicio zen</p>
+                <h4 class="font-semibold">Vista Principal
+                <span class="text-sm text-gray-300">Página de inicio zen</span></h4>
               </div>
             </div>
           </div>
@@ -370,10 +370,10 @@ onMounted(() => {
                 class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
               <div
-                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                class="absolute bottom-1 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <h4 class="font-semibold">Panel Admin</h4>
-                <p class="text-sm text-gray-300">Gestión de servicios</p>
+                <h4 class="font-semibold">Panel Admin
+                <span class="text-sm text-gray-300">Gestión de servicios</span></h4>
               </div>
             </div>
           </div>
@@ -389,10 +389,10 @@ onMounted(() => {
                 class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
               <div
-                class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                class="absolute bottom-1 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <h4 class="font-semibold">Servicios</h4>
-                <p class="text-sm text-gray-300">Catálogo de bienestar</p>
+                <h4 class="font-semibold">Servicios
+                <span class="text-sm text-gray-300">Catálogo de bienestar</span></h4>
               </div>
             </div>
           </div>
