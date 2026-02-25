@@ -936,6 +936,7 @@ onMounted(() => {
             >
               <a
                 href="/maduixa"
+                target="_blank"
                 style="view-transition-name: maduixa-img"
                 class="block transition-link z-30"
               >
@@ -974,6 +975,7 @@ onMounted(() => {
             >
               <a
                 href="/espaciozen"
+              target="_blank"
                 style="view-transition-name: espaciozen-img"
                 class="block transition-link z-30"
               >
@@ -1107,6 +1109,7 @@ onMounted(() => {
             >
               <a
                 href="/cafe"
+              target="_blank"
                 style="view-transition-name: cafe-img"
                 class="block transition-link"
               >
