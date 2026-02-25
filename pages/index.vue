@@ -72,9 +72,10 @@ onMounted(() => {
   }
 
   const tl = gsap.timeline({
+    
     scrollTrigger: {
       start: "top top",
-      end: "+=18000",
+      end: "+=2000%",
       scrub: 2,
       pin: true,
       onUpdate: (self) => {
